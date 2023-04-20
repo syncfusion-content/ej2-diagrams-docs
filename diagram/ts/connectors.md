@@ -391,6 +391,19 @@ While interacting with multiple bezier segments, maintain their control points a
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors-cs46" %}
 
+Also, the visibility of control points can be controlled using the bezierSettings.controlPointsVisibility property of the connector class.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/connectors-cs47/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/connectors-cs47/index.html %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs47" %}
+
 ## Decorator
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [`sourceDecorator`](../api/diagram/connector#sourcedecorator-DecoratorModel) and [`targetDecorator`](../api/diagram/connector#targetdecorator-DecoratorModel) properties of the connector.
@@ -403,14 +416,14 @@ While interacting with multiple bezier segments, maintain their control points a
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs47/index.ts %}
+{% include code-snippet/diagram/connectors-cs48/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs47/index.html %}
+{% include code-snippet/diagram/connectors-cs48/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs47" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs48" %}
 
 ## Padding
 
@@ -424,14 +437,14 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs48/index.ts %}
+{% include code-snippet/diagram/connectors-cs49/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs48/index.html %}
+{% include code-snippet/diagram/connectors-cs49/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs48" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs49" %}
 
 ## Flip
 
@@ -450,14 +463,14 @@ The flip types are as follows:
 .
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs49/index.ts %}
+{% include code-snippet/diagram/connectors-cs50/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs49/index.html %}
+{% include code-snippet/diagram/connectors-cs50/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs49" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs50" %}
 
  >Note: The flip is not applicable when the connectors connect in nodes
 
@@ -468,14 +481,14 @@ Bridging can be enabled/disabled either with the `connector.constraints` or `dia
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs50/index.ts %}
+{% include code-snippet/diagram/connectors-cs51/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs50/index.html %}
+{% include code-snippet/diagram/connectors-cs51/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs50" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs51" %}
 >Note: You need to inject connector bridging module into the diagram.
 
 The [`bridgeSpace`](../api/diagram/connector#bridgespace-number) property of connectors can be used to define the width for line bridging.
@@ -488,14 +501,14 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs51/index.ts %}
+{% include code-snippet/diagram/connectors-cs52/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs51/index.html %}
+{% include code-snippet/diagram/connectors-cs52/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs51" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs52" %}
 
 ## Appearance
 
@@ -511,14 +524,14 @@ The following code example illustrates how to customize the segment appearance.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs52/index.ts %}
+{% include code-snippet/diagram/connectors-cs53/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs52/index.html %}
+{% include code-snippet/diagram/connectors-cs53/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs52" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs53" %}
 
 ## Decorator appearance
 
@@ -532,14 +545,14 @@ The following code example illustrates how to customize the appearance of the de
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs53/index.ts %}
+{% include code-snippet/diagram/connectors-cs54/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs53/index.html %}
+{% include code-snippet/diagram/connectors-cs54/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs53" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs54" %}
 
 ## Interaction
 
@@ -579,19 +592,6 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs54/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs54/index.html %}
-{% endhighlight %}
-{% endtabs %}
-          
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs54" %}
-
-* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](../api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/diagram/connectors-cs55/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
@@ -601,13 +601,7 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors-cs55" %}
 
-## Constraints
-
-* The [`constraints`](../api/diagram/connector#constraints-ConnectorConstraints) property of connector allows to enable/disable certain features of connectors.
-
-* To enable or disable the constraints, refer [`constraints`](../api/diagram/connectorConstraints).
-
-The following code illustrates how to disable selection.
+* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](../api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -619,6 +613,25 @@ The following code illustrates how to disable selection.
 {% endtabs %}
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors-cs56" %}
+
+## Constraints
+
+* The [`constraints`](../api/diagram/connector#constraints-ConnectorConstraints) property of connector allows to enable/disable certain features of connectors.
+
+* To enable or disable the constraints, refer [`constraints`](../api/diagram/connectorConstraints).
+
+The following code illustrates how to disable selection.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/connectors-cs57/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/connectors-cs57/index.html %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs57" %}
 
 ## Custom properties
 
@@ -645,14 +658,14 @@ The following code illustrates how to render connector based on the stack order.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs57/index.ts %}
+{% include code-snippet/diagram/connectors-cs58/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs57/index.html %}
+{% include code-snippet/diagram/connectors-cs58/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs57" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs58" %}
 
 ## Enable Connector Splitting
 
@@ -662,14 +675,14 @@ The following code illustrates how to split the connector and create a connectio
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/diagram/connectors-cs58/index.ts %}
+{% include code-snippet/diagram/connectors-cs59/index.ts %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/connectors-cs58/index.html %}
+{% include code-snippet/diagram/connectors-cs59/index.html %}
 {% endhighlight %}
 {% endtabs %}
           
-{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs58" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs59" %}
 
 ![Enable Connector Split](../images/EnableSplit.gif)
 

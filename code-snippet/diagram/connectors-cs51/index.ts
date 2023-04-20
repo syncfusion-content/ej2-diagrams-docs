@@ -1,51 +1,87 @@
 
 
 
-import {Diagram,NodeModel,ConnectorModel} from '@syncfusion/ej2-diagrams';
-let nodes: NodeModel[] = [{
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
+import {Diagram,ConnectorBridging,DiagramConstraints,ConnectorModel,NodeModel}from'@syncfusion/ej2-diagrams';
+Diagram.Inject(ConnectorBridging);
+let node1: NodeModel = {
+    id: 'Transaction',
+    width: 150,
+    height: 60,
+    offsetX: 300,
+    offsetY: 60,
+    shape: {
+        type: 'Flow',
+        shape: 'Terminator'
     },
-    {
-        id: 'node2',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 350,
-    },
-]
-let connectors: ConnectorModel[] = [{
-    id: "connector1",
-    type: 'Orthogonal',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
+    annotations: [{
+        id: 'label1',
+        content: 'Start Transaction',
+        offset: {
+            x: 0.5,
+            y: 0.5
         }
-    },
-    // Sets the radius for the rounded corner
-    cornerRadius: 10,
-    sourceID: 'node1',
-    targetID: 'node2',
-    segments: [{
-        type: 'Orthogonal',
-        direction: 'Right',
-        length: 50
     }],
-}]
+};
+let node2: NodeModel = {
+    id: 'Verification',
+    width: 150,
+    height: 60,
+    offsetX: 300,
+    offsetY: 250,
+    shape: {
+        type: 'Flow',
+        shape: 'Process'
+    },
+    annotations: [{
+        id: 'label2',
+        content: 'Verification',
+        offset: {
+            x: 0.5,
+            y: 0.5
+        }
+    }]
+};
+let connectors: ConnectorModel = {
+    id: 'connector1',
+    type: 'Straight',
+    sourceID: 'Transaction',
+    targetID: 'Verification'
+};
+let connectors2: ConnectorModel = {
+    id: 'connector2',
+    type: 'Straight',
+    sourcePoint: {
+        x: 200,
+        y: 130
+    },
+    targetPoint: {
+        x: 400,
+        y: 130
+    }
+};
+let connector3: ConnectorModel = {
+    id: 'connector3',
+    type: 'Straight',
+    sourcePoint: {
+        x: 200,
+        y: 170
+    },
+    targetPoint: {
+        x: 400,
+        y: 170
+    }
+};
+// Enables bridging for every connector added in the model
 let diagram: Diagram = new Diagram({
     width: '100%',
-    height: '600px',
-    connectors: connectors,
-    nodes: nodes,
+    getConnectorDefaults: (obj: ConnectorModel): ConnectorModel => {
+        obj.style.strokeColor = '#6BA5D7';
+        obj.style.fill = '#6BA5D7';
+        obj.style.strokeWidth = 2;
+        obj.targetDecorator.style.fill = '#6BA5D7';
+        obj.targetDecorator.style.strokeColor = '#6BA5D7';
+        return obj;
+    },
     getNodeDefaults: (node: NodeModel) => {
         node.height = 100;
         node.width = 100;
@@ -53,8 +89,12 @@ let diagram: Diagram = new Diagram({
         node.style.strokeColor = 'white';
         return node;
     },
+    nodes: [node1, node2],
+    height: '600px',
+    // Enables the bridging constraints for the connector
+    constraints: DiagramConstraints.Default | DiagramConstraints.Bridging,
+    connectors: [connectors, connectors2, connector3]
 });
-
 diagram.appendTo('#element');
 
 

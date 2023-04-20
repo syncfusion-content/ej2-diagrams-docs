@@ -1,54 +1,79 @@
 
 
 
-import {ConnectorModel,NodeModel,BasicShapeModel,Diagram} from '@syncfusion/ej2-diagrams';
-let nodes: NodeModel[] = [{
-        id: 'node',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
-    },
-    {
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 300,
-        offsetY: 100,
-    },
-];
+import {Diagram,ConnectorModel} from '@syncfusion/ej2-diagrams';
 let connectors: ConnectorModel = {
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
+    type: 'Straight',
+    // Decorator shape- circle
+    sourceDecorator: {
+        shape: 'Circle',
+        // Defines the style for the sourceDecorator
         style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
+            // Defines the strokeWidth for the sourceDecorator
+            strokeWidth: 3,
+            // Defines the strokeColor for the sourceDecorator
+            strokeColor: 'red'
+        },
     },
-    sourceID: 'node',
-    targetID: 'node1',
-    // Set Source Padding value
-    sourcePadding:20,
-    // Set Target Padding value
-    targetPadding:20
+    // Decorator shape - Diamond
+    targetDecorator: {
+        // Defines the custom shape for the connector's target decorator
+        shape: 'Custom',
+        //Defines the  path for the connector's target decorator
+        pathData: 'M80.5,12.5 C80.5,19.127417 62.59139,24.5 40.5,24.5 C18.40861,24.5 0.5,19.127417 0.5,12.5' +
+            'C0.5,5.872583 18.40861,0.5 40.5,0.5 C62.59139,0.5 80.5,5.872583 80.5,12.5 z'
+        //defines the style for the target decorator
+        style: {
+            // Defines the strokeWidth for the targetDecorator
+            strokeWidth: 3,
+            // Defines the strokeColor for the sourceDecorator
+            strokeColor: 'green',
+            // Defines the opacity for the sourceDecorator
+            opacity: .8
+        },
+    },
+    sourcePoint: {
+        x: 100,
+        y: 100
+    },
+    targetPoint: {
+        x: 200,
+        y: 200
+    }
+};
+let connectors2: ConnectorModel = {
+    id: "connectors2",
+    type: 'Straight',
+    // Decorator shape - IndentedArrow
+    sourceDecorator: {
+        shape: 'IndentedArrow',
+        style: {
+            strokeWidth: 3,
+            strokeColor: 'blue'
+        },
+    },
+    // Decorator shape - OutdentedArrow
+    targetDecorator: {
+        shape: 'OutdentedArrow',
+        style: {
+            strokeWidth: 3,
+            strokeColor: 'yellow'
+        },
+    },
+    sourcePoint: {
+        x: 400,
+        y: 100
+    },
+    targetPoint: {
+        x: 300,
+        y: 200
+    }
 }
 let diagram: Diagram = new Diagram({
     width: '100%',
-    height: 900,
-    nodes: nodes,
-    connectors: [connectors],
-    getNodeDefaults: (node: NodeModel) => {
-        node.height = 100;
-        node.width = 100;
-        node.style.fill = '#6BA5D7';
-        node.style.strokeColor = 'white';
-        return node;
-    },
+    height: '600px',
+    connectors: [connectors, connectors2],
 });
 diagram.appendTo('#element');
 

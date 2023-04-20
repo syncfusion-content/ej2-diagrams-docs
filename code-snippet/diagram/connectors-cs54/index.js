@@ -1,26 +1,37 @@
- 
-ej.diagrams.Diagram.Inject(ej.diagrams.LineRouting);
-var diagram;
-var nodes = [
-  { id: 'shape1', offsetX: 100, offsetY: 100, width: 120, height: 50 },
-  { id: 'shape2', offsetX: 300, offsetY: 300, width: 120, height: 50 },
-  { id: 'shape3', offsetX: 150, offsetY: 200, width: 120, height: 50 }
-];
-var connectors = [
-  { id: 'connector', sourceID: 'shape1', targetID: 'shape2', type: 'Orthogonal' }
-];
- 
+var connectors = [{
+    id: "connector1",
+    type: 'Straight',
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+        strokeWidth: 2
+    },
+    bridgeSpace: 20,
+    // Cutomize the target decorator
+    targetDecorator: {
+        style: {
+            // Fill color of the decorator
+            fill: '#6BA5D7',
+            // Stroke color of the decorator
+            strokeColor: '#6BA5D7'
+        }
+    },
+    sourcePoint: {
+        x: 100,
+        y: 100
+    },
+    targetPoint: {
+        x: 200,
+        y: 200
+    }
+}];
+
 var diagram = new ej.diagrams.Diagram({
-  width: '100%', height: 900, nodes: nodes, connectors: connectors,
-  
-  constraints: ej.diagrams.DiagramConstraints.Default | ej.diagrams.DiagramConstraints.LineRouting,
-  getNodeDefaults: function (node) {
-    node = { style: { strokeColor: '#6BA5D7', fill: '#6BA5D7' } }
-    return node;
-  },
-  snapSettings: {
-    constraints: ej.diagrams.SnapConstraints.None,
-  }
-});
-diagram.appendTo('#element'); 
+    width: '100%',
+    height: '600px',
+    connectors: connectors,
+}, '#element');
+
+diagram.appendTo('#element');
+
 
