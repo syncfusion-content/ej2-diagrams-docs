@@ -1,99 +1,36 @@
 
 
 
-import {Diagram,ConnectorBridging,DiagramConstraints,ConnectorModel,NodeModel}from'@syncfusion/ej2-diagrams';
-Diagram.Inject(ConnectorBridging);
-let node1: NodeModel = {
-    id: 'Transaction',
-    width: 150,
-    height: 60,
-    offsetX: 300,
-    offsetY: 60,
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    },
-    annotations: [{
-        id: 'label1',
-        content: 'Start Transaction',
-        offset: {
-            x: 0.5,
-            y: 0.5
-        }
-    }],
-};
-let node2: NodeModel = {
-    id: 'Verification',
-    width: 150,
-    height: 60,
-    offsetX: 300,
-    offsetY: 250,
-    shape: {
-        type: 'Flow',
-        shape: 'Process'
-    },
-    annotations: [{
-        id: 'label2',
-        content: 'Verification',
-        offset: {
-            x: 0.5,
-            y: 0.5
-        }
-    }]
-};
+import {ConnectorModel,NodeModel,BasicShapeModel,Diagram} from '@syncfusion/ej2-diagrams';
 let connectors: ConnectorModel = {
-    id: 'connector1',
-    type: 'Straight',
-    sourceID: 'Transaction',
-    targetID: 'Verification'
-};
-let connectors2: ConnectorModel = {
-    id: 'connector2',
-    type: 'Straight',
+    id: "connector1",
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+        strokeWidth: 2
+    },
+    targetDecorator: {
+        style: {
+            fill: '#6BA5D7',
+            strokeColor: '#6BA5D7'
+        }
+    },
+    type: 'Orthogonal',
     sourcePoint: {
-        x: 200,
-        y: 130
+        x: 100,
+        y: 100
     },
     targetPoint: {
-        x: 400,
-        y: 130
-    }
-};
-let connector3: ConnectorModel = {
-    id: 'connector3',
-    type: 'Straight',
-    sourcePoint: {
         x: 200,
-        y: 170
+        y: 200
     },
-    targetPoint: {
-        x: 400,
-        y: 170
-    }
-};
-// Enables bridging for every connector added in the model
+    // Flip the connector in horizontal direction
+    flip:"Horizontal"
+}
 let diagram: Diagram = new Diagram({
     width: '100%',
-    getConnectorDefaults: (obj: ConnectorModel): ConnectorModel => {
-        obj.style.strokeColor = '#6BA5D7';
-        obj.style.fill = '#6BA5D7';
-        obj.style.strokeWidth = 2;
-        obj.targetDecorator.style.fill = '#6BA5D7';
-        obj.targetDecorator.style.strokeColor = '#6BA5D7';
-        return obj;
-    },
-    getNodeDefaults: (node: NodeModel) => {
-        node.height = 100;
-        node.width = 100;
-        node.style.fill = '#6BA5D7';
-        node.style.strokeColor = 'white';
-        return node;
-    },
-    nodes: [node1, node2],
-    height: '600px',
-    // Enables the bridging constraints for the connector
-    constraints: DiagramConstraints.Default | DiagramConstraints.Bridging,
-    connectors: [connectors, connectors2, connector3]
+    height: 900,
+    connectors: [connectors],
 });
 diagram.appendTo('#element');
 

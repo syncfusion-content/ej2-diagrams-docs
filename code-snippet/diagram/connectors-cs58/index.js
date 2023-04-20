@@ -1,30 +1,41 @@
-var node1 = { 
-    id: 'node1',
-    width: 100, height: 100,
-    offsetX: 150, offsetY: 150,
-    annotations: [{ content: 'node1' } ], 
-};
-var node2= {
-    id: 'node2', 
-    width: 100, height: 100, 
-    offsetX: 650, offsetY: 150,
-    annotations: [{ content: 'node2' } ],
-};
-var node3 = {
-    id: 'node3', 
-    width: 100, height: 100,
-     offsetX: 490, offsetY: 290,
-     annotations: [{ content: 'node3' } ],
-};
-var connector1 = {
-    id: 'connector1',sourceID:"node1",targetID:"node2",
-    constraints: ej.diagrams.ConnectorConstraints.Default | ej.diagrams.ConnectorConstraints.AllowDrop
-};
-var diagram = new ej.diagrams.Diagram({
-    width: 1500, height: 1000,
-    enableConnectorSplit:true,
-    nodes: [node1, node2, node3],
-    connectors: [connector1]
-}, '#element');
-
+var connectors = {
+        id: 'connector1',
+        addInfo: 'connec',
+        zIndex: 2,
+        type: 'Straight',
+        sourcePoint: {
+            x: 300,
+            y: 100
+        },
+        targetPoint: {
+            x: 300,
+            y: 200
+        }
+    };
+    var connectors2 = {
+        id: 'connector2',
+        type: 'Straight',
+        zIndex: 1,
+        sourcePoint: {
+            x: 100,
+            y: 100
+        },
+        targetPoint: {
+            x: 200,
+            y: 200
+        }
+    };
+    var diagram = new ej.diagrams.Diagram({
+        width: '100%',
+        getConnectorDefaults: function (obj) {
+            obj.style.strokeColor = '#6BA5D7';
+            obj.style.fill = '#6BA5D7';
+            obj.style.strokeWidth = 2;
+            obj.targetDecorator.style.fill = '#6BA5D7';
+            obj.targetDecorator.style.strokeColor = '#6BA5D7';
+            return obj;
+        },
+        height: '600px',
+        connectors: [ connectors,connectors2]
+    }, '#element');
 

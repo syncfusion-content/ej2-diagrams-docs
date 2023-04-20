@@ -1,77 +1,68 @@
-var connectors = {
-    id: "connector1",
-    type: 'Straight',
-    // Decorator shape- circle
-    sourceDecorator: {
+ej.diagrams.Diagram.Inject(ej.diagrams.ConnectorEditing);
+var nodes = [{
+    id: 'Start',
+    offsetX: 250,
+    offsetY: 150,
+    annotations: [{ content: 'Start' }],
+    ports: [{
+        id: 'StartPort',
+        visibility: ej.diagrams.PortVisibility.Visible,
         shape: 'Circle',
-        // Defines the style for the sourceDecorator
-        style: {
-            // Defines the strokeWidth for the sourceDecorator
-            strokeWidth: 3,
-            // Defines the strokeColor for the sourceDecorator
-            strokeColor: 'red'
-        },
+        offset: { x: 1, y: 0.5 },
+        style: { strokeColor: '#366F8C', fill: '#366F8C' }
+    }]
+},
+{
+    id: 'End',
+    offsetX: 450,
+    offsetY: 200,
+    annotations: [{ content: 'End' }],
+    ports: [{
+        id: 'EndPort',
+        visibility: ej.diagrams.PortVisibility.Visible,
+        shape: 'Circle',
+        offset: { x: 0, y: 0.5 },
+        style: { strokeColor: '#366F8C', fill: '#366F8C' }
+    }]
+}];
 
+let connectors = [{
+    id: "connector1",
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+        strokeWidth: 2
     },
-    // Decorator shape - Diamond
-    targetDecorator: {
-        // Defines the custom shape for the connector's target decorator
-        shape: 'Custom',
-        //Defines the  path for the connector's target decorator
-        pathData: 'M80.5,12.5 C80.5,19.127417 62.59139,24.5 40.5,24.5 C18.40861,24.5 0.5,19.127417 0.5,12.5' +
-            'C0.5,5.872583 18.40861,0.5 40.5,0.5 C62.59139,0.5 80.5,5.872583 80.5,12.5 z',
-        //defines the style for the target decorator
-        style: {
-            // Defines the strokeWidth for the targetDecorator
-            strokeWidth: 3,
-            // Defines the strokeColor for the sourceDecorator
-            strokeColor: 'green',
-            // Defines the opacity for the sourceDecorator
-            opacity: .8
-        },
-    },
-    sourcePoint: {
-        x: 100,
-        y: 100
-    },
-    targetPoint: {
-        x: 200,
-        y: 200
-    }
-};
-var connectors2 = {
-    id: "connectors2",
-    type: 'Straight',
-    // Decorator shape - IndentedArrow
-    sourceDecorator: {
-        shape: 'IndentedArrow',
-        style: {
-            strokeWidth: 3,
-            strokeColor: 'blue'
-        },
+    targetDecorator: { shape: 'None' },
+    // ID of the source and target nodes
+    sourceID: "Start",
+    sourcePortID: "StartPort",
+    targetID: "End",
+    targetPortID: "EndPort",
+    type: 'Bezier',
 
-    },
-    // Decorator shape - OutdentedArrow
-    targetDecorator: {
-        shape: 'OutdentedArrow',
-        style: {
-            strokeWidth: 3,
-            strokeColor: 'yellow'
-        },
-    },
-    sourcePoint: {
-        x: 400,
-        y: 100
-    },
-    targetPoint: {
-        x: 300,
-        y: 200
-    }
-}
+    // Configuring settings for bezier interactions
+    bezierSettings : { controlPointsVisibility: ej.diagrams.ControlPointsVisibility.Source | ej.diagrams.ControlPointsVisibility.Target }
+}];
 
 var diagram = new ej.diagrams.Diagram({
     width: '100%',
     height: '600px',
-    connectors: [connectors, connectors2],
-}, '#element');
+    nodes: nodes,
+    connectors: connectors,
+    // Defines the default properties for the node
+    getNodeDefaults: (node) => {
+        node.height = 100;
+        node.width = 100;
+        node.shape = { type: 'Basic', shape: 'Rectangle' }
+        node.style.fill = '#6BA5D7';
+        node.style.strokeColor = 'white';
+        return node;
+    },
+    getConnectorDefaults: (connector) => {
+        connector.constraints = ej.diagrams.ConnectorConstraints.Default | ej.diagrams.ConnectorConstraints.DragSegmentThumb;
+        return connector;
+    }
+});
+diagram.appendTo('#element');
 
