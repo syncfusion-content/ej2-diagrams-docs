@@ -52,14 +52,14 @@ The client-side method [`startGroupAction`](../api/diagram) is used to notify th
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/diagram/undo redo-cs1/index.js %}
+{% include code-snippet/diagram/undoredo-cs1/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/undo redo-cs1/index.html %}
+{% include code-snippet/diagram/undoredo-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/undo redo-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/undoredo-cs1" %}
 
 ### Track custom changes
 
@@ -91,14 +91,14 @@ canLog in the history list, which takes a history entry as argument and returns 
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/diagram/undo redo-cs2/index.js %}
+{% include code-snippet/diagram/undoredo-cs2/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/undo redo-cs2/index.html %}
+{% include code-snippet/diagram/undoredo-cs2/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/undo redo-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/undoredo-cs2" %}
 
 ### Track undo/redo actions
 
@@ -142,14 +142,14 @@ The [`stackLimit`](../api/diagram) property of history manager is used to limits
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/diagram/undo redo-cs3/index.js %}
+{% include code-snippet/diagram/undoredo-cs3/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/undo redo-cs3/index.html %}
+{% include code-snippet/diagram/undoredo-cs3/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/undo redo-cs3" %}
+{% previewsample "page.domainurl/code-snippet/diagram/undoredo-cs3" %}
 
 ## Retain Selection
 
