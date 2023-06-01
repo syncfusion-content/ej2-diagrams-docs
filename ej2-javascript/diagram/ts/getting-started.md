@@ -74,7 +74,7 @@ System.config({
 
 Add the HTML div element for the diagram into your `index.html`. `[src/index.html]`
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
