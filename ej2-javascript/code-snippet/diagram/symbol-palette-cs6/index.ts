@@ -14,7 +14,10 @@ export function getBasicShapes(): NodeModel[] {
             shape: {
                 type: 'Basic',
                 shape: 'Rectangle'
-            }
+            },
+            tooltip: {
+                content: 'Rectangle Tooltip',
+            },
         },
         {
             id: 'Ellipse',
@@ -28,7 +31,12 @@ export function getBasicShapes(): NodeModel[] {
             shape: {
                 type: 'Basic',
                 shape: 'Hexagon'
-            }
+            },
+            tooltip: {
+                content: 'Hexagon Tooltip',
+            },
+            //customized content of the Tooltip is enabled by Node Tooltip Cosnstraints
+            cosntraints: NodeConstraints.Default | NodeConstraints.Tooltip
         },
     ];
     return basicShapes;
