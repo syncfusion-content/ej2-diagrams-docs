@@ -174,21 +174,6 @@ The following code illustrates how to arrange the nodes in a radial tree structu
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](../api/diagram/layout) of layout should be set as `MindMap`.
 
-The following code example illustrates how to create an organizational chart.
-
->Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
-
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/diagram/AutomaticLayout-cs8/index.js %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs8/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs8" %}
-
 ## Tree Orientation in layout
 
 An [`Orientation`](../api/diagram/orientation) of a `MindMapTreeLayout` is used to arrange the tree layout according to a specific direction. By default, the orientation is set to Horizontal. The following table outlines the various orientation types available:
@@ -208,18 +193,20 @@ An [`Orientation`](../api/diagram/orientation) of a `MindMapTreeLayout` is used 
 </tr>
 </table>
 
->Note: If you want to change mind map orientation in diagram, only Horizontal and vertical options allowed.
+The following code example illustrates how to create an mindmap layout.
+
+>Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
-{% include code-snippet/diagram/AutomaticLayout-cs33/index.js %}
+{% include code-snippet/diagram/AutomaticLayout-cs8/index.js %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
-{% include code-snippet/diagram/AutomaticLayout-cs33/index.html %}
+{% include code-snippet/diagram/AutomaticLayout-cs8/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs33" %}
+{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs8" %}
 
 ## Complex hierarchical tree
 

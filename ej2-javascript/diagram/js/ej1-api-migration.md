@@ -14600,7 +14600,6 @@ diagram.loadDiagram(ej1Data, true);
 
 ```
 
-
 ## Tooltip
 
 <!-- markdownlint-disable MD033 -->
