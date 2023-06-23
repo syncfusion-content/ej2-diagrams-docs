@@ -189,6 +189,38 @@ The following code example illustrates how to create an organizational chart.
         
 {% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs8" %}
 
+## Tree Orientation in layout
+
+An [`Orientation`](../api/diagram/orientation) of a `MindMapTreeLayout` is used to arrange the tree layout according to a specific direction. By default, the orientation is set to Horizontal. The following table outlines the various orientation types available:
+
+<table>
+<tr>
+<td><b>Orientation Type<b></td>
+<td><b>Description<b></td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>Aligns the tree layout from left to right</td>
+</tr>
+<tr>
+<td>Vertical</td>
+<td>Aligns the tree layout from top to bottom</td>
+</tr>
+</table>
+
+>Note: If you want to change mind map orientation in diagram, only Horizontal and vertical options allowed.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/diagram/AutomaticLayout-cs33/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/AutomaticLayout-cs33/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/AutomaticLayout-cs33" %}
+
 ## Complex hierarchical tree
 
 Complex hierarchical tree layout is the extended version of the hierarchical tree layout. The child had been two or more parents. To create a complex hierarchical tree, the [`type`](../api/diagram/layout) of layout should be set as `ComplexHierarchicalTree`.
