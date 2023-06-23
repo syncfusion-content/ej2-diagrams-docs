@@ -5,7 +5,6 @@ var diagram;
 diagram = new ej.diagrams.Diagram({
     width: '650px',
     height: '350px',
-    constraints: ej.diagrams.DiagramConstraints.Default | ej.diagrams.DiagramConstraints.Tooltip,
     //Defines nodes
     nodes: [{
         id: "node1",

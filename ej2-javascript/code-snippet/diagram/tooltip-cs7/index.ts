@@ -34,7 +34,6 @@ let port: PointPortModel[] = [{
 let diagram: Diagram = new Diagram({
     width: '100%',
     height: '350px',
-    constraints: DiagramConstraints.Default | DiagramConstraints.Tooltip,
     //Defines nodes
     nodes: [{
         id: "node1",

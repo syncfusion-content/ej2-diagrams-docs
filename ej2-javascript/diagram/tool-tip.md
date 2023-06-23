@@ -102,9 +102,11 @@ The tooltip can be customized for each node and connector. Remove the **InheritT
 
 ## Tooltip for Ports
 
-- The tooltip feature has been implemented to support Ports, providing the ability to display information or descriptions when the mouse hovers over them.
-- To display tooltips on mouseover, set the desired tooltip [`content`](../api/diagram/diagramTooltip/#content) by utilizing the [`tooltip`](../api/diagram#tooltip) property.
-- Tooltips for Ports can be enabled or disabled using the [`PortConstraints`](../api/diagram/port#constraints-portconstraints) Tooltip property.
+The tooltip feature has been implemented to support Ports, providing the ability to display information or descriptions when the mouse hovers over them.
+
+To display tooltips on mouseover, set the desired tooltip [`content`](../api/diagram/diagramTooltip/#content) by utilizing the [`tooltip`](../api/diagram#tooltip) property.
+
+Tooltips for Ports can be enabled or disabled using the [`PortConstraints`](../api/diagram/port#constraints-portconstraints) Tooltip property.
 
 
 ```ts
@@ -120,7 +122,7 @@ let ports: [{
     }]
 ```
 
-- Dynamic modification of tooltip content is supported, allowing you to change the displayed tooltip content during runtime.
+Dynamic modification of tooltip content is supported, allowing you to change the displayed tooltip content during runtime.
 
 ```ts
 {

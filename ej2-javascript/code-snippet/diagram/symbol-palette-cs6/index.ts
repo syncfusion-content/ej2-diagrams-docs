@@ -36,7 +36,7 @@ export function getBasicShapes(): NodeModel[] {
                 content: 'Hexagon Tooltip',
             },
             //customized content of the Tooltip is enabled by Node Tooltip Cosnstraints
-            cosntraints: NodeConstraints.Default | NodeConstraints.Tooltip
+            constraints: NodeConstraints.Default | NodeConstraints.Tooltip
         },
     ];
     return basicShapes;
