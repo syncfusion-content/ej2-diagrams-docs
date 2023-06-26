@@ -62,7 +62,8 @@ let diagram: Diagram = new Diagram({
     //Uses layout to auto-arrange nodes on the diagram page
     layout: {
         //Sets layout type
-        type: 'MindMap'
+        type: 'MindMap',
+        orientation: 'Horizontal'
     },//Configures data source for diagram
     dataSourceSettings: {
         id: 'id',
