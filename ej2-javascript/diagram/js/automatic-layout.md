@@ -180,8 +180,8 @@ An [`Orientation`](../api/diagram/orientation) of a `MindMapTreeLayout` is used 
 
 <table>
 <tr>
-<td><b>Orientation Type<b></td>
-<td><b>Description<b></td>
+<td><b>Orientation Type</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>Horizontal</td>
@@ -195,7 +195,7 @@ An [`Orientation`](../api/diagram/orientation) of a `MindMapTreeLayout` is used 
 
 The following code example illustrates how to create an mindmap layout.
 
->Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
+N> If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
