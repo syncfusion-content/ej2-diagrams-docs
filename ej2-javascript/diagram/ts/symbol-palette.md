@@ -202,6 +202,7 @@ The following code is an example to change the color of a symbol description for
 {% endtabs %}
           
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette-cs18" %}
+
 ## Tooltip for symbols in symbol palette
 
 The Symbol palette supports displaying tooltips when mouse hovers over the symbols. You can customize the tooltip for each symbol in the symbol palette.
@@ -211,7 +212,7 @@ When hovering over symbols in the symbol palette, the default tooltip displays t
 Refer to the image below for an illustration of the tooltip behavior in the symbol palette.
 
 
-![SymmbolPaletteTooltip](../../diagram/images/SymbolPalatteTooltip.gif)
+![SymmbolPaletteTooltip](../diagram/images/SymbolPalatteTooltip.gif)
 
 ### Custom tooltip for symbols
 
@@ -239,7 +240,7 @@ When a symbol is dragged from the symbol palette and enters the diagram canvas, 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 
 
-![SymmbolPaletteCustomTooltip](../../diagram/images/SymbolCustomTooltip.gif)
+![SymmbolPaletteCustomTooltip](../diagram/images/SymbolCustomTooltip.gif)
 
 The following code snippet will demonstrate how to define two different tooltip for symbol in the symbol palette and dropped node in the diagram canvas.
 
@@ -261,7 +262,6 @@ function dragEnter(args:IDragEnterEventArgs)
         args.dragItem.tooltip.content='This is Diagram Tooltip';
     }
 ```
-
 
 
 ## Palette interaction

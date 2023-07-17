@@ -29,7 +29,7 @@ var basicShapes = [{
             content: 'Hexagon Tooltip',
         },
         //customized content of the Tooltip is enabled by Node Tooltip Cosnstraints
-        constraints: NodeConstraints.Default | NodeConstraints.Tooltip
+        constraints: ej.diagrams.NodeConstraints.Default | ej.diagrams.NodeConstraints.Tooltip
     }
 ];
 //Initializes the symbol palette
