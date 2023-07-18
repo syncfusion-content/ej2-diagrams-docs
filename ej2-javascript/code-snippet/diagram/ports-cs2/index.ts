@@ -23,7 +23,7 @@ let port: PointPortModel[] = [{
             y: 0.5
         },
         visibility: PortVisibility.Visible
-    } {
+    },{
         id: 'port2',
         offset: {
             x: 1,

@@ -266,17 +266,17 @@ The orthogonal connector can have any number of segments in between the source a
 | Shape name | Shape |
 |-------- | -------- |
 |Rhombus| ![Rhombus](images/rhombus.png) |
-| Square | ![Square](images/Square.png) |
+| Square | ![Square](images/square.png) |
 | Rectangle | ![Rectangle](images/Rectangle.png) |
 | Ellipse |![Ellipse](images/Ellipse.png) |
 |Arrow| ![Arrow](images/Arrow.png) |
 | OpenArrow | ![OpenArrow](images/OpenArrow.png) |
-| Circle |![Circle](images/Circle.png) |
-| Fletch|![Fletch](images/Fletch.png) |
-|OpenFetch| ![OpenFetch](images/OpenFetch.png) |
-| IndentedArrow | ![IndentedArrow](images/IndentedArrow.png) |
-| OutdentedArrow | ![OutdentedArrow](images/OutdentedArrow.png) |
-| DoubleArrow |![DoubleArrow](images/DoubleArrow.png) |
+| Circle |![Circle](../images/Circle.png) |
+| Fletch|![Fletch](../images/Fletch.png) |
+|OpenFetch| ![OpenFetch](../images/OpenFetch.png) |
+| IndentedArrow | ![IndentedArrow](../images/IndentedArrow.png) |
+| OutdentedArrow | ![OutdentedArrow](../images/OutdentedArrow.png) |
+| DoubleArrow |![DoubleArrow](../images/DoubleArrow.png) |
 
  You can customize the style of the thumb shape by overriding the class e-orthogonal-thumb.
 
