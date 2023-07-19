@@ -266,7 +266,7 @@ The orthogonal connector can have any number of segments in between the source a
 | Shape name | Shape |
 |-------- | -------- |
 |Rhombus| ![Rhombus](images/rhombus.png) |
-| Square | ![Square](images/Square.png) |
+| Square | ![Square](images/square.png) |
 | Rectangle | ![Rectangle](images/Rectangle.png) |
 | Ellipse |![Ellipse](images/Ellipse.png) |
 |Arrow| ![Arrow](images/Arrow.png) |
@@ -684,7 +684,7 @@ The following code illustrates how to split the connector and create a connectio
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors-cs59" %}
 
-![Enable Connector Split](../images/EnableSplit.gif)
+![Enable Connector Split](images/EnableSplit.gif)
 
 ## See Also
 

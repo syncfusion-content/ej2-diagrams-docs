@@ -1,7 +1,7 @@
 
 
 
-import { Diagram, ConnectorModel } from '@syncfusion/ej2-diagrams';
+import { Diagram, ConnectorModel, ConnectorEditing, ConnectorConstraints } from '@syncfusion/ej2-diagrams';
 
 Diagram.Inject(ConnectorEditing);
 
