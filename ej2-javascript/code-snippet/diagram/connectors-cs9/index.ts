@@ -5,7 +5,8 @@ import {
     Diagram,
     ConnectorModel,
     OrthogonalSegmentModel,
-    ConnectorConstraints
+    ConnectorConstraints,
+    ConnectorEditing
 } from '@syncfusion/ej2-diagrams';
 
 Diagram.Inject(ConnectorEditing);
