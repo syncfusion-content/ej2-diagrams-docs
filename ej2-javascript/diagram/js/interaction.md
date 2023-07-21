@@ -40,7 +40,7 @@ During single click, any existing item in the selection list be cleared, and onl
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
-![Multiple Selection](../images/multiselect_Highlight.gif)
+![Multiple Selection](images/multiselect_Highlight.gif)
 
 ## Select/Unselect elements using program
 
