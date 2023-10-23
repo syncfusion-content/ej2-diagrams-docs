@@ -37,15 +37,23 @@ The following list of dependencies are required to use the `Diagram` component i
 
 Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
-```
-    git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
 
-```
-    cd ej2-quickstart
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion JavaScript packages
 
@@ -53,9 +61,13 @@ Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com]
 
 The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
 
-```
-    npm install
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npm install
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import the Syncfusion CSS styles
 
@@ -63,9 +75,13 @@ Syncfusion JavaScript controls come with [built-in themes](https://ej2.syncfusio
 
 The quickstart application is preconfigured to use the `Material` theme in the `~/src/styles/styles.css` file, as shown below: 
 
-```
-  @import "../../node_modules/@syncfusion/ej2/material.css";
-```
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
+
+@import "../../node_modules/@syncfusion/ej2/material.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 > You can check out the [themes](https://ej2.syncfusion.com/documentation/appearance/theme/) section to know more about built-in themes and CSS reference for individual controls.
 
@@ -73,7 +89,9 @@ The quickstart application is preconfigured to use the `Material` theme in the `
 
 Add the HTML div element for the diagram into your `index.html`. `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +110,9 @@ Add the HTML div element for the diagram into your `index.html`. `[src/index.htm
 </body>
 
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, import the diagram component into your `app.ts` to instantiate a diagram and append the diagram instance to the `#container`. `[src/app/app.ts]`
 
@@ -111,11 +131,13 @@ The following example shows a basic diagram.
 
 Now, the `npm run start` command is used to run the application in the browser.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
 
 npm run start
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Module Injection
 
@@ -138,11 +160,15 @@ The diagram component is divided into individual feature-wise modules. In order 
 
 These modules should be imported and injected into the Diagram component using `Diagram.Inject` method as follows.
 
-```javascript
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Diagram, HierarchicalTree, MindMap, RadialTree, ComplexHierarchicalTree, DataBinding, Snapping, PrintAndExport, BpmnDiagrams, SymmetricLayout, ConnectorBridging, UndoRedo, LayoutAnimation, DiagramContextMenu, ConnectorEditing } from '@syncfusion/ej2-diagrams';
 
 Diagram.Inject(BpmnDiagrams, ConnectorBridging, ConnectorEditing, ComplexHierarchicalTree, DataBinding, DiagramContextMenu, HierarchicalTree, LayoutAnimation, MindMap, PrintAndExport, RadialTree, Snapping, SymmetricLayout, UndoRedo);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Flow Diagram
 
@@ -203,7 +229,8 @@ In the 'Flow Diagram' section, how to create a diagram manually was discussed. T
 
 Define Employee Information as JSON data. The following code example shows an employee array whose, `Name` is used as an unique identifier and `ReportingPerson` is used to identify the person to whom an employee report to, in the organization.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 //Initialize data source...
 let data: object[] = [{Name: "Elizabeth", Role: "Director" },
@@ -215,13 +242,15 @@ let data: object[] = [{Name: "Elizabeth", Role: "Director" },
 { Name: "Yvonne", ReportingPerson: "Yang", Role: "Lead" }
 ];
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Map data source
 
 You can configure the above "Employee Information" with diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example show how `dataSourceSettings` is used to map ID and parent with property name identifiers for employee information.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 //Initialize data source...
 
@@ -244,7 +273,8 @@ let diagram: Diagram = new Diagram({
     }
 });
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Visualize employee
 
