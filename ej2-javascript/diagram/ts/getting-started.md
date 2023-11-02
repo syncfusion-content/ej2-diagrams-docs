@@ -106,9 +106,9 @@ Add the HTML div element for the diagram into your `index.html`. `[src/index.htm
 </head>
 
 <body>
-     <!--container which is going to render the Diagram-->
-     <div id='container'>
-     </div>
+    <!--container which is going to render the Diagram-->
+    <div id='container'>
+    </div>
 </body>
 
 </html>
