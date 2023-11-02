@@ -11,7 +11,9 @@ domainurl: ##DomainURL##
 
 # Getting started in ##Platform_Name## Diagram control
 
-This section explains the steps required to create a simple diagram and demonstrates the basic usage of the diagram control.
+This section explains how to create a simple Diagram component and configure its available functionalities in TypeScript, using Essential JS 2 [quickstart](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-) seed repository.
+
+> This application is integrated with the `webpack.config.js` configuration and uses the latest version of the [webpack-cli](https://webpack.js.org/api/cli/#commands). It requires node `v14.15.0` or higher. For more information about webpack and its features, refer to the [webpack documentation](https://webpack.js.org/guides/getting-started/).
 
 <!-- markdownlint-disable MD033 -->
 
@@ -31,50 +33,65 @@ The following list of dependencies are required to use the `Diagram` component i
     |-- @syncfusion/ej2-splitbuttons
 ```
 
-## Installation and Configuration
+## Set up development environment
 
-* To get started with the diagram component, clone the [`Essential JS 2 quickStart`](https://github.com/syncfusion/ej2-quickstart.git) project and install necessary packages by using the following commands.
+Open the command prompt from the required directory, and run the following command to clone the Syncfusion JavaScript (Essential JS 2) quickstart project from [GitHub](https://github.com/SyncfusionExamples/ej2-quickstart-webpack-).
 
-```
-git clone https://github.com/syncfusion/ej2-quickstart.git quickstart
-cd quickstart
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+git clone https://github.com/SyncfusionExamples/ej2-quickstart-webpack- ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
+
+After cloning the application in the `ej2-quickstart` folder, run the following command line to navigate to the `ej2-quickstart` folder.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd ej2-quickstart
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion JavaScript packages
+
+Syncfusion JavaScript (Essential JS 2) packages are available on the [npmjs.com](https://www.npmjs.com/~syncfusionorg) public registry. You can install all Syncfusion JavaScript (Essential JS 2) controls in a single [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package or individual packages for each control.
+
+The quickstart application is preconfigured with the dependent [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in the `~/package.json` file. Use the following command to install the dependent npm packages from the command prompt.
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
 npm install
-```
 
-* `Diagram packages` should be mapped in the `system.config.js` configuration file.
+{% endhighlight %}
+{% endtabs %}
 
-```javascript
-System.config({
-    paths: {
-        'syncfusion:': './node_modules/@syncfusion/',
-    },
-    map: {
-        app: 'app',
+## Import the Syncfusion CSS styles
 
-        //Syncfusion packages mapping
-        "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
-        "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
-        "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
-        "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",
-        "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
-        "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
-        "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
-        "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
-        "@syncfusion/ej2-diagrams": "syncfusion:ej2-diagrams/dist/ej2-diagrams.umd.min.js",
-    },
-    packages: {
-        'app': { main: 'app', defaultExtension: 'js' }
-    }
-});
-```
+To render the Diagram component, need to import diagram and its dependent component’s styles as given below in the `~/src/styles/styles.css` file, as shown below: 
 
->The [project](https://github.com/syncfusion/ej2-quickstart.git) is preconfigured with common settings (`src/styles/styles.css`, `system.config.js`) to start with all Essential JS 2 components.
+{% tabs %}
+{% highlight css tabtitle="style.css" %}
+
+@import '../../node_modules/@syncfusion/ej2-diagrams/styles/material.css';
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add diagram to the project
 
 Add the HTML div element for the diagram into your `index.html`. `[src/index.html]`
 
-```html
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,27 +101,20 @@ Add the HTML div element for the diagram into your `index.html`. `[src/index.htm
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Typescript UI Controls" />
     <meta name="author" content="Syncfusion" />
-     <link rel="shortcut icon" href="resources/favicon.ico" />
+    <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!--Style reference from app-->
-    <link href="/styles/styles.css" rel="stylesheet" />
-
-    <!--System js reference and configuration-->
-    <script src="node_modules/systemjs/dist/system.src.js" type="text/javascript"></script>
-    <script src="system.config.js" type="text/javascript"></script>
-    <link href="index.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.38/system.js"></script>
-    </head>
+</head>
 
 <body>
-     <!--container which is going to render the Diagram-->
-     <div id='container'>
-     </div>
+    <!--container which is going to render the Diagram-->
+    <div id='container'>
+    </div>
 </body>
 
 </html>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, import the diagram component into your `app.ts` to instantiate a diagram and append the diagram instance to the `#container`. `[src/app/app.ts]`
 
@@ -123,11 +133,13 @@ The following example shows a basic diagram.
 
 Now, the `npm run start` command is used to run the application in the browser.
 
-```
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
 
 npm run start
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Module Injection
 
@@ -150,11 +162,15 @@ The diagram component is divided into individual feature-wise modules. In order 
 
 These modules should be imported and injected into the Diagram component using `Diagram.Inject` method as follows.
 
-```javascript
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+
 import { Diagram, HierarchicalTree, MindMap, RadialTree, ComplexHierarchicalTree, DataBinding, Snapping, PrintAndExport, BpmnDiagrams, SymmetricLayout, ConnectorBridging, UndoRedo, LayoutAnimation, DiagramContextMenu, ConnectorEditing } from '@syncfusion/ej2-diagrams';
 
 Diagram.Inject(BpmnDiagrams, ConnectorBridging, ConnectorEditing, ComplexHierarchicalTree, DataBinding, DiagramContextMenu, HierarchicalTree, LayoutAnimation, MindMap, PrintAndExport, RadialTree, Snapping, SymmetricLayout, UndoRedo);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Flow Diagram
 
@@ -215,7 +231,8 @@ In the 'Flow Diagram' section, how to create a diagram manually was discussed. T
 
 Define Employee Information as JSON data. The following code example shows an employee array whose, `Name` is used as an unique identifier and `ReportingPerson` is used to identify the person to whom an employee report to, in the organization.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 //Initialize data source...
 let data: object[] = [{Name: "Elizabeth", Role: "Director" },
@@ -227,13 +244,15 @@ let data: object[] = [{Name: "Elizabeth", Role: "Director" },
 { Name: "Yvonne", ReportingPerson: "Yang", Role: "Lead" }
 ];
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Map data source
 
 You can configure the above "Employee Information" with diagram, so that the nodes and connectors are automatically generated using the mapping properties. The following code example show how `dataSourceSettings` is used to map ID and parent with property name identifiers for employee information.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
 
 //Initialize data source...
 
@@ -256,7 +275,8 @@ let diagram: Diagram = new Diagram({
     }
 });
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Visualize employee
 
