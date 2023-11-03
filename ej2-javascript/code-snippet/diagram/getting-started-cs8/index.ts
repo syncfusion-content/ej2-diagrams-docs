@@ -15,7 +15,7 @@ let nodes: NodeModel[] = [
     {
         id: 'Init', width: 140, height: 50, offsetX: 300, offsetY: 140,
         shape: { type: '', shape: 'Process' },
-        annotations: [{ conFlowtent: 'var i = 0;' }]
+        annotations: [{ content: 'var i = 0;' }]
     }
 ];
 let connectors: ConnectorModel = {
