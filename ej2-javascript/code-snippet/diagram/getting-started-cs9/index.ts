@@ -22,7 +22,7 @@ let connector: ConnectorModel[] = [
         id: 'connector4', sourceID: 'Condition', targetID: 'End', annotations: [{ content: 'No' }],
         type: 'Orthogonal',
         segments: [
-            { type: 'Orthogonal', length: 50, direction: "Right" },
+            { type: 'Orthogonal', length: 30, direction: "Right" },
             { type: 'Orthogonal', length: 300, direction: "Bottom" }
         ]
     },
@@ -31,7 +31,7 @@ let connector: ConnectorModel[] = [
         id: 'connector6', sourceID: 'Increment', targetID: 'Condition',
         type: 'Orthogonal',
         segments: [
-            { type: 'Orthogonal', length: 50, direction: "Left" },
+            { type: 'Orthogonal', length: 30, direction: "Left" },
             { type: 'Orthogonal', length: 200, direction: "Top" }
         ]
     }];
@@ -52,6 +52,5 @@ let diagram: Diagram = new Diagram({
 });
 
 diagram.appendTo('#element');
-
 
 
