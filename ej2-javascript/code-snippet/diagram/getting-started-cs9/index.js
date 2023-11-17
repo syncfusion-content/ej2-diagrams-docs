@@ -1,4 +1,7 @@
 
+
+
+
 var nodes = [
     { id: 'Start', offsetY: 50, annotations: [{ content: 'Start' }], shape: { type: 'Flow', shape: 'Terminator' } },
     { id: 'Init', offsetY: 140, annotations: [{ content: 'var i = 0;' }], shape: { type: 'Flow', shape: 'Process' } },
@@ -15,35 +18,16 @@ var connector = [
     {
         id: 'connector4', sourceID: 'Condition', targetID: 'End', annotations: [{ content: 'No' }],
         type: 'Orthogonal',
-        segments: [
-            { type: 'Orthogonal', length: 50, direction: "Right" },
-            { type: 'Orthogonal', length: 300, direction: "Bottom" }
-        ]
+        segments: [{ length: 50, direction: 'Bottom' }]
     },
     { id: 'connector5', sourceID: 'Print', targetID: 'Increment' },
     {
         id: 'connector6', sourceID: 'Increment', targetID: 'Condition',
         type: 'Orthogonal',
-        segments: [
-            { type: 'Orthogonal', length: 50, direction: "Left" },
-            { type: 'Orthogonal', length: 200, direction: "Top" }
-        ]
+        segments: [{ length: 50, direction: 'Bottom' }]
     }
 ];
 
 var diagram = new ej.diagrams.Diagram({
-    width: '100%', height: '600px', nodes: nodes, connectors: connector,
-    getNodeDefaults: function (node) {
-        node.height = 50;
-        node.width = 140;
-        node.offsetX = 300;
-        return node;
-    },
-    getConnectorDefaults: function (obj) {
-        obj.type = "Orthogonal";
-        obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
-        return obj;
-    },
-    created: function () { diagram.fitToPage(); }
+    width: '100%', height: '600px', nodes: nodes, connectors: connector
     }, '#element');
-
