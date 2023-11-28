@@ -18,13 +18,19 @@ var connector = [
     {
         id: 'connector4', sourceID: 'Condition', targetID: 'End', annotations: [{ content: 'No' }],
         type: 'Orthogonal',
-        segments: [{ length: 50, direction: 'Bottom' }]
+        segments: [
+            { type: 'Orthogonal', length: 30, direction: "Right" },
+            { type: 'Orthogonal', length: 300, direction: "Bottom" }
+        ]
     },
     { id: 'connector5', sourceID: 'Print', targetID: 'Increment' },
     {
         id: 'connector6', sourceID: 'Increment', targetID: 'Condition',
         type: 'Orthogonal',
-        segments: [{ length: 50, direction: 'Bottom' }]
+        segments: [
+            { type: 'Orthogonal', length: 30, direction: "Left" },
+            { type: 'Orthogonal', length: 200, direction: "Top" }
+        ]
     }
 ];
 
