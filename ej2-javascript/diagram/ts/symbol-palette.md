@@ -263,6 +263,22 @@ function dragEnter(args:IDragEnterEventArgs)
     }
 ```
 
+## UML Nodes in Symbol palette
+
+UML Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modelling of object oriented systems because they are the only UML diagrams which can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
+
+The following code example illustrates how to render the UML nodes in palette.
+
+{% tabs %}
+{% highlight js tabtitle="index.ts" %}
+{% include code-snippet/diagram/symbol-palette-cs19/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/symbol-palette-cs19/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette-cs19" %}
 
 ## Palette interaction
 
