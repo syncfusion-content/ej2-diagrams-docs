@@ -264,7 +264,7 @@ function dragEnter(args:IDragEnterEventArgs)
 ```
 
 
-## UML Nodes in Symbol palette
+## Adding UML Nodes in Symbol palette
 
 UML Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modelling of object oriented systems because they are the only UML diagrams which can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
 
