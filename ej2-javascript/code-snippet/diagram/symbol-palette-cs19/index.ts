@@ -25,9 +25,6 @@ export function getUmlShapes(): NodeModel[] {
                 classShape: {
                     attributes: [
                         { name: 'accepted', type: 'Date', style: { color: "red", fontFamily: "Arial", textDecoration: 'Underline',  italic: true },isSeparator: true },
-                        { name: 'sickness', type: 'History' },
-                        { name: 'prescription', type: 'String[*]' },
-                        { name: 'allergies', type: 'String[*]' }
                     ],
                     methods: [{ name: 'getHistory', style: {}, parameters: [{ name: 'Date', style: {} }], type: 'History' }],
                     name: 'Patient'
@@ -44,22 +41,6 @@ export function getUmlShapes(): NodeModel[] {
                 type: 'UmlClassifier',
                 interfaceShape: {
                     name: "Bank Account",
-                    attributes: [{
-                            name: "owner",
-                            type: "String[*]", style: {}
-                        },
-                        {
-                            name: "balance",
-                            type: "Dollars"
-                        }],
-                    methods: [{
-                            name: "deposit", style: {},
-                            parameters: [{
-                                    name: "amount",
-                                    type: "Dollars",
-                                    style: {}
-                                }],
-                        }]
                 },
                 classifier: 'Interface'
             },
@@ -77,12 +58,6 @@ export function getUmlShapes(): NodeModel[] {
                         {
                             name: 'Checking Account', style: {}
                         },
-                        {
-                            name: 'Savings Account'
-                        },
-                        {
-                            name: 'Credit Account'
-                        }
                     ]
                 },
                 classifier: 'Enumeration'
@@ -93,7 +68,6 @@ export function getUmlShapes(): NodeModel[] {
 }
 
 let palette: SymbolPalette = new SymbolPalette({
-    expandMode: 'Multiple',
     palettes: [
         { id: 'UML', expanded: true, symbols: getUmlShapes(), title: 'UMLClass Nodes' },
     ],
