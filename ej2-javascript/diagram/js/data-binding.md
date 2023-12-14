@@ -53,7 +53,7 @@ You can bind the diagram with remote data by using [`dataManager`].
 
 It uses two different classes: `DataManager` for processing and `Query` for serving data. `DataManager` communicates with data source and `Query` generates data queries that are read by the [`dataManager`](../api/diagram/dataSourceModel/).
 
-To learn more about data manager, refer to [`Data Manager`](../api/diagram/dataSourceModel).
+To learn more about data manager, refer to [`Data Manager`](../api/diagram/dataSourceModel/).
 
 To bind remote data to the diagram,configure the fields of [`dataSourceSettings`](../api/diagram/dataSourceModel/). The following code illustrates how to bind remote data to the diagram.
 
