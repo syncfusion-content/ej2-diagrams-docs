@@ -6,6 +6,9 @@ var diagram;
 var nodes = [
     {
       id: "Patient",
+      style: {
+        fill: '#26A0DA',
+      },
       shape: {
         type: "UmlClassifier",
         classShape: {

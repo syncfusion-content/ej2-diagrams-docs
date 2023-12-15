@@ -7,6 +7,9 @@ var node = {
     id: 'node',
         offsetX: 300,
         offsetY: 200,
+        style: {
+            fill: '#26A0DA',
+        },
         shape: {
             type: 'UmlClassifier',
             enumerationShape: {
