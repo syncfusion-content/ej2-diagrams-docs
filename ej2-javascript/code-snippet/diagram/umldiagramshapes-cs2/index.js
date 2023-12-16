@@ -6,6 +6,9 @@ var node = {
     id: 'node',
         offsetX: 400,
         offsetY: 300,
+        style: {
+            fill: '#26A0DA',
+        },
         shape: {
             type: 'UmlClassifier',
             interfaceShape: {
