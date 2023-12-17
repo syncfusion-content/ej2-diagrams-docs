@@ -118,6 +118,61 @@ The following code illustrates how a group node is added at runtime.
 {% previewsample "page.domainurl/code-snippet/diagram/group-cs3" %}
 {% endif %}
 
+
+## Add children To group at runtime
+
+A childNode can be added to the specified Group at runtime by utilizing the client-side method `diagram.addChildToGroup`. 
+
+This functionality is achieved by passing the group and existing children as arguments to the method.
+
+The following code illustrates how a child node and a group node can be passed as arguments to the method and executed at runtime.
+
+```html
+
+diagram.addChildToGroup(groupNode, childNode); 
+
+```
+## Remove children from group at runtime
+
+A specific child from a group node can be removed at runtime by utilizing the client-side method `diagram.removeChildFromGroup `. 
+
+This functionality is achieved by passing the group and its children as arguments to the method.
+
+The following code illustrates how a child node is removed from a group at runtime.
+
+```html
+
+diagram.removeChildFromGroup (groupNode, childNode); 
+
+```
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/group-cs6/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/group-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/group-cs3" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/diagram/group-cs6/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/group-cs6/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/diagram/group-cs3" %}
+{% endif %}
+
 ## Container
 
 Containers are used to automatically measure and arrange the size and position of the child elements in a predefined manner. There are two types of containers available.
