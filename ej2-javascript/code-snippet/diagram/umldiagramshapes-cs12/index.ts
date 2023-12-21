@@ -66,6 +66,10 @@ export function getUmlShapes(): NodeModel[] {
   ];
   return umlShapes;
 }
+function setPaletteNodeDefaults(node:any) {
+    node.width = 100;
+    node.height = 100;
+}
 
 let palette: SymbolPalette = new SymbolPalette({
   palettes: [
@@ -79,7 +83,7 @@ let palette: SymbolPalette = new SymbolPalette({
       return { fit: true, description: { text: symbol.id, }};
   }
 });
-palette.appendTo('#element');
+palette.appendTo('#symbolpalette');
 
 
 

@@ -385,6 +385,34 @@ diagram.addChildToUmlNode(node, methods, 'Methods');
 
 ```
 
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/umldiagramshapes-cs13/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs13/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs13" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/diagram/umldiagramshapes-cs13/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs13/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs13" %}
+{% endif %}
+
+
 The following code illustrates how to add attributes to UML nodes in the diagram.
 
 ```ts
@@ -394,6 +422,34 @@ diagram.addChildToUmlNode(node, attributes, "Attributes");
 
 ```
 
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/umldiagramshapes-cs14/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs14/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs14" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/diagram/umldiagramshapes-cs14/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs14/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs14" %}
+{% endif %}
+
+
 The following code illustrates how to add members to UML nodes in the diagram.
 
 ```ts
@@ -402,6 +458,34 @@ let members = { name: 'Checking new', style: { color: "red", }, isSeparator: tru
 diagram.addChildToUmlNode(node, members, "Members");
 
 ```
+
+{% if page.publishingplatform == "typescript" %}
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/umldiagramshapes-cs15/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs15/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs15" %}
+
+{% elsif page.publishingplatform == "javascript" %}
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/diagram/umldiagramshapes-cs15/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/umldiagramshapes-cs15/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes-cs15" %}
+{% endif %}
+
 
 ### Adding UML child through user interaction
 
@@ -448,7 +532,7 @@ You can edit the name, attributes, and methods of the class diagram shapes just 
 
 The following image illustrates how the text editor looks in an edit mode.
 
-![Editing Class Diagram](images/ClassEdit.png)
+![Editing Class Diagram](images/Editing.gif)
 
 ## UML Activity diagram
 
@@ -464,7 +548,7 @@ The purpose of an activity diagram can be described as follows.
 
 ## UML Activity diagram Shapes
 
-To create a UmlActivity, define the type as "UmlActivity" and the list of built-in shapes as demonstrated as follows and it should be set in the "shape" property.
+To create an Uml Activity, define the type as "UmlActivity" and the list of built-in shapes as demonstrated as follows and it should be set in the "shape" property.
 
 | Shape          | Image                                    |
 | -------------- | ---------------------------------------- |

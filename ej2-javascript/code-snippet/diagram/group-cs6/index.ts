@@ -30,11 +30,20 @@ let diagram: Diagram = new Diagram({
 });
 diagram.appendTo('#element');
 
-//To Add child to specifc group at Runtime
-diagram.addChildToGroup(group, 'node3');
+let addButton: any = document.getElementById('addChild');
+if (addButton) {
+  addButton.addEventListener('click', function () {
+    //To Add child to specifc group at Runtime
+    diagram.addChildToGroup(group, 'node3');
+  });
+}
 
-//To remove the specific children from group at runtime
-diagram.removeChildFromGroup(group, 'node3');
-
+let removeButton: any = document.getElementById('removeChild');
+if (removeButton) {
+  removeButton.addEventListener('click', function () {
+    //To remove the specific children from group at runtime
+    diagram.removeChildFromGroup(group, 'node3');
+  });
+}
 
 
