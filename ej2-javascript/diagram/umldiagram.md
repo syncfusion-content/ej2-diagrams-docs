@@ -381,7 +381,7 @@ The following code illustrates how to add methods to UML nodes in the diagram.
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let methods = { name: 'getHistory', style: { color: "red", }, parameters: [{ name: 'Date', style: {} }], type: 'History' };
-diagram.addChildToUmlNode(node, methods, 'Methods');
+diagram.addChildToUmlNode(node, methods, 'Method');
 
 ```
 
@@ -418,7 +418,7 @@ The following code illustrates how to add attributes to UML nodes in the diagram
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let attributes = { name: 'accepted', type: 'Date', style: { color: "red", } };
-diagram.addChildToUmlNode(node, attributes, "Attributes");
+diagram.addChildToUmlNode(node, attributes, "Attribute");
 
 ```
 
@@ -455,7 +455,7 @@ The following code illustrates how to add members to UML nodes in the diagram.
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let members = { name: 'Checking new', style: { color: "red", }, isSeparator: true };
-diagram.addChildToUmlNode(node, members, "Members");
+diagram.addChildToUmlNode(node, members, "Member");
 
 ```
 
