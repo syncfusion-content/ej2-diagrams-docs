@@ -39,7 +39,7 @@ if (addButton) {
   addButton.addEventListener('click', function() {
       if (diagram.selectedItems.nodes[0]) {
         let node:any = diagram.selectedItems.nodes[0];
-        let members:any = { name: 'Checking new', style: { color: "red", }, isSeparator: true };
+        let members:any = { name: 'Checking new', style: { color: "red", }};
         diagram.addChildToUmlNode(node, members, "Member");
     }
   });
