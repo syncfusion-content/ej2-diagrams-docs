@@ -532,7 +532,7 @@ You can edit the name, attributes, and methods of the class diagram shapes just 
 
 The following image illustrates how the text editor looks in an edit mode.
 
-![Editing Class Diagram](images/ClassEdit.png)
+![Editing Class Diagram](images/Editing.gif)
 
 ## UML Activity diagram
 
