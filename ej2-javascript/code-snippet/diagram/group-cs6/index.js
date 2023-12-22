@@ -20,10 +20,13 @@ diagram = new ej.diagrams.Diagram({
 
 }, '#element');
 
-//To Add child to specifc group at Runtime
-diagram.addChildToGroup(group, 'node3');
+document.getElementById('addChild').onclick = function () {
+  //To Add child to specifc group at Runtime
+  diagram.addChildToGroup(group, 'node3');
+};
 
-//To remove the specific children from group at runtime
-diagram.removeChildFromGroup(group, 'node3');
-
+document.getElementById('removeChild').onclick = function () {
+  //To remove the specific children from group at runtime
+  diagram.removeChildFromGroup(group, 'node3');
+};
 
