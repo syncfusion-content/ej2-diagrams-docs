@@ -139,4 +139,4 @@ The accessibility compliance of the Diagram component is shown in the following 
 
 ## See also
 
-- [Accessibility in Syncfusion React components](../common/accessibility)
+- [Accessibility in Syncfusion Javascript components](../common/accessibility)
