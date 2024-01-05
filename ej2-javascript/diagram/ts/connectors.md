@@ -448,7 +448,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 ## Hit padding
 
-* The [`hitPadding`](../api/diagram/connector#hitpadding) property allows you to specify the distance around the connector path that should be considered as the clickable area.The hitPadding property needs to define within the configuration of individual connectors. The default hit padding value is 10.
+* The [`hitPadding`](../api/diagram/connector#hitpadding) property enables you to define the clickable area around the connector path.The default value for hitPadding is 10.
 
 * The following code example illustrates how to specify hit padding for connector.
 
