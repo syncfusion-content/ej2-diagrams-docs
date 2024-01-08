@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Symbol palette in JavaScript Diagram control | Syncfusion
-description: Learn here all about Symbol palette in Syncfusion JavaScript Diagram control of Syncfusion Essential JS 2 and more.
+description: Learn here all about Symbol palette in Syncfusion Essential JavaScript Diagram control, its elements and more.
 platform: ej2-javascript
 control: Symbol palette 
 publishingplatform: JavaScript
