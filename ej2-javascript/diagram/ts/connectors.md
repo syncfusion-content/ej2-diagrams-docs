@@ -446,6 +446,52 @@ Padding is used to leave the space between the Connector's end point and the obj
           
 {% previewsample "page.domainurl/code-snippet/diagram/connectors-cs49" %}
 
+## Hit padding
+
+* The [`hitPadding`](../api/diagram/connector#hitpadding) property enables you to define the clickable area around the connector path.The default value for hitPadding is 10.
+
+* The following code example illustrates how to specify hit padding for connector.
+
+{% tab template= "diagram/connectors", es5Template="es5ConnectorHitPadding" %}
+
+```typescript
+
+import {ConnectorModel,NodeModel,BasicShapeModel,Diagram,ConnectorConstraints} from '@syncfusion/ej2-diagrams';
+
+let connectors: ConnectorModel = {
+    id: "connector1",
+    type:"Orthogonal",
+    hitPadding:40,
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+        strokeWidth: 2
+    },
+    targetDecorator: {
+        style: {
+            fill: '#6BA5D7',
+            strokeColor: '#6BA5D7'
+        }
+    },
+    sourcePoint: { x: 100, y: 100 },
+    targetPoint: { x: 300, y: 300 },
+}
+
+let diagram: Diagram = new Diagram({
+    width: '100%',
+    height: 900,
+    connectors: [connectors],
+    getConnectorDefaults: (connector: ConnectorModel) => {
+        connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
+        return connector;
+    },
+});
+diagram.appendTo('#element');
+
+```
+
+{% endtab %}
+
 ## Flip
 
 The diagram Provides support to flip the connector. The [`flip`](../api/diagram/connector#flip) is performed to give the mirrored image of the original element.
