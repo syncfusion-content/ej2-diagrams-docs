@@ -57,7 +57,7 @@ let diagram: Diagram = new Diagram({
 
 });
 
-diagram.appendTo('#diagram');
+diagram.appendTo('#element');
 
 
 
