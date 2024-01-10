@@ -47,7 +47,7 @@ let connector2: ConnectorModel = {};
 
 let diagram: Diagram = new Diagram({
 
-    width: '900px', height: '500px', connectors: [connector2],
+    width: '900px', height: '500px', connectors: [connector2],segmentThumbShape: 'Square',
 
     getConnectorDefaults: function (connector: ConnectorModel) {
 
