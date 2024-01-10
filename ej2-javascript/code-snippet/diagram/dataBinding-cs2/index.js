@@ -33,17 +33,24 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
             connector.style.strokeColor = '#048785';
             connector.targetDecorator.shape = 'None';
         },
-        //Configures data source
-        dataSourceSettings: {
-            id: 'EmployeeID', parentId: 'ReportsTo',
-            dataManager: new ej.data.DataManager({ url: 'http://mvc.syncfusion.com/Services/Northwnd.svc/', crossDomain: true }, new ej.data.Query().from('Employees').select('EmployeeID,ReportsTo,FirstName').take(9)),
+          //Configures data source
+          dataSourceSettings: {
+            id: 'Id',
+            parentId: 'ParentId',
+            dataSource: new DataManager({
+            url: 'https://services.syncfusion.com/js/production/api/RemoteData',
+            crossDomain: true,
+            }),
             //binds the external data with node
-            doBinding: function (nodeModel, data, diagram) {
-                nodeModel.annotations = [{
-                    content: data.FirstName,
-                    style: { color: 'white' }
-                }];
-            }
+            doBinding: (nodeModel, data, diagram) => {
+            nodeModel.annotations = [
+                {
+                /* tslint:disable:no-string-literal */
+                content: data['Label'],
+                style: { color: 'white' },
+                },
+            ];
+            },
         },
         //Disables all interactions except zoom/pan
         tool: ej.diagrams.DiagramTools.ZoomPan,
