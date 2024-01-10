@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Symbol palette in JavaScript Diagram control | Syncfusion
-description: Learn here all about Symbol palette in Syncfusion Essential JavaScript Diagram control, its elements and more.
+title: Symbol palette in JavaScript Diagram Control | Syncfusion
+description: Learn here all about symbol palette in Syncfusion Essential JavaScript Diagram control, its elements and more.
 platform: ej2-javascript
 control: Symbol palette 
-publishingplatform: JavaScript
+publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol palette in JavaScript Diagram control
+# Symbol palette in JavaScript Diagram Control
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
 
@@ -212,7 +212,7 @@ When hovering over symbols in the symbol palette, the default tooltip displays t
 Refer to the image below for an illustration of the tooltip behavior in the symbol palette.
 
 
-![SymmbolPaletteTooltip](../diagram/images/SymbolPalatteTooltip.gif)
+![Symmbol palette tooltip in JavaScript Diagram.](../diagram/images/javascript-diagram-symbol-palatte-tooltip.gif)
 
 ### Custom tooltip for symbols
 
@@ -240,7 +240,7 @@ When a symbol is dragged from the symbol palette and enters the diagram canvas, 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 
 
-![SymmbolPaletteCustomTooltip](../diagram/images/SymbolCustomTooltip.gif)
+![Symmbol palette custom tooltip in JavaScript Diagram](../diagram/images/javascript-diagram-symbol-custom-tooltip.gif)
 
 The following code snippet will demonstrate how to define two different tooltip for symbol in the symbol palette and dropped node in the diagram canvas.
 
