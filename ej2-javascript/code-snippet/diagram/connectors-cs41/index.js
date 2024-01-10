@@ -19,7 +19,7 @@ var connector1 = {
 };
 var diagram = new ej.diagrams.Diagram({
     width: 1500, height: 1000,
-    connectors: [connector1]
+    connectors: [connector1],segmentThumbShape: 'Square',
 }, '#element');
 
 

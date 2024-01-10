@@ -17,7 +17,7 @@ let node: NodeModel = {
     //sets the type of the shape as Image
         shape: {
             type: 'Image',
-            source: 'http://www.syncfusion.com/content/images/nuget/sync_logo_icon.png',
+            source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png',
             scale: 'None'
         },
         //Customizes the appearances such as text, font, fill, and stroke.

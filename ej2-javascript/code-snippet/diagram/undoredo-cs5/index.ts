@@ -2,7 +2,7 @@
 
 
 import {
-    Diagram, NodeModel, ConnectorModel, UndoRedo
+    Diagram, NodeModel, ConnectorModel, UndoRedo,HistoryEntry
 } from '@syncfusion/ej2-diagrams';
 Diagram.Inject(UndoRedo);
 let nodes: NodeModel[] = [{
@@ -34,7 +34,7 @@ let diagram: Diagram = new Diagram({
 });
 diagram.appendTo('#element');
 // canLog decide whether the entry add or not in history List
-diagram.historyList.canLog = function(entry: HistoryEntry) {
+diagram.historyManager.canLog = function(entry: HistoryEntry) {
     entry.cancel = true;
     return entry;
 }
