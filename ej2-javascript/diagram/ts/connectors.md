@@ -452,45 +452,16 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 * The following code example illustrates how to specify hit padding for connector.
 
-{% tab template= "diagram/connectors", es5Template="es5ConnectorHitPadding" %}
-
-```typescript
-
-import {ConnectorModel,NodeModel,BasicShapeModel,Diagram,ConnectorConstraints} from '@syncfusion/ej2-diagrams';
-
-let connectors: ConnectorModel = {
-    id: "connector1",
-    type:"Orthogonal",
-    hitPadding:40,
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
-    sourcePoint: { x: 100, y: 100 },
-    targetPoint: { x: 300, y: 300 },
-}
-
-let diagram: Diagram = new Diagram({
-    width: '100%',
-    height: 900,
-    connectors: [connectors],
-    getConnectorDefaults: (connector: ConnectorModel) => {
-        connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
-        return connector;
-    },
-});
-diagram.appendTo('#element');
-
-```
-
-{% endtab %}
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/diagram/connectors-cs60/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/diagram/connectors-cs60/index.html %}
+{% endhighlight %}
+{% endtabs %}
+          
+{% previewsample "page.domainurl/code-snippet/diagram/connectors-cs60" %}
 
 ## Flip
 
