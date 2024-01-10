@@ -67,11 +67,16 @@ export function getUmlShapes(): NodeModel[] {
   return umlShapes;
 }
 
+function setPaletteNodeDefaults(node:NodeModel) {
+    node.width = 100;
+    node.height = 100;
+}
 let palette: SymbolPalette = new SymbolPalette({
   palettes: [
       { id: 'UML', expanded: true, symbols: getUmlShapes(), title: 'UMLClass Nodes' },
   ],
   width: '100%', height: '100%', symbolHeight: 90, symbolWidth: 90,
+  getNodeDefaults: setPaletteNodeDefaults,
   symbolMargin: { left: 12, right: 12, top: 12, bottom: 12 },
   //Defines the symbol description for the symbols in the palette
   getSymbolInfo: (symbol: NodeModel): SymbolInfo => {
