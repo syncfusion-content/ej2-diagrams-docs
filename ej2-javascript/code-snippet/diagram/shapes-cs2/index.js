@@ -5,7 +5,7 @@ var node = {
     // Size of the node
     width: 100,
     height: 100,
-    shape: { type: 'Image', source: 'http://www.syncfusion.com/content/images/nuget/sync_logo_icon.png' },
+    shape: { type: 'Image', source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png' },
     //Customizes the appearances such as text, font, fill, and stroke.
     style: { fill: 'none' }
         };
