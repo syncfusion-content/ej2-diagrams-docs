@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol Palette in JavaScript Diagram Control | Syncfusion
-description: Learn here all about Symbol Palette in Syncfusion Essential JavaScript Diagram control, its elements and more.
+title: Symbol Palette in ##Platform_Name## Diagram Control | Syncfusion
+description: Learn here all about Symbol Palette in Syncfusion Essential ##Platform_Name## Diagram control, its elements and more.
 platform: ej2-javascript
 control: Symbol palette 
 publishingplatform: ##Platform_Name##
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Symbol Palette in JavaScript Diagram Control
+# Symbol Palette in ##Platform_Name## Diagram Control
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
 
