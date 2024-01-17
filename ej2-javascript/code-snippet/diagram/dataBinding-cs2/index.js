@@ -37,20 +37,17 @@ ej.diagrams.Diagram.Inject(ej.diagrams.DataBinding, ej.diagrams.HierarchicalTree
           dataSourceSettings: {
             id: 'Id',
             parentId: 'ParentId',
-            dataSource: new DataManager({
+            dataSource: new ej.data.DataManager({ 
             url: 'https://services.syncfusion.com/js/production/api/RemoteData',
             crossDomain: true,
             }),
             //binds the external data with node
-            doBinding: (nodeModel, data, diagram) => {
-            nodeModel.annotations = [
-                {
-                /* tslint:disable:no-string-literal */
-                content: data['Label'],
-                style: { color: 'white' },
-                },
-            ];
-            },
+            doBinding: function (nodeModel, data, diagram) {
+                nodeModel.annotations = [{
+                    content: data.Label,
+                    style: { color: 'white' }
+                }];
+            }
         },
         //Disables all interactions except zoom/pan
         tool: ej.diagrams.DiagramTools.ZoomPan,
