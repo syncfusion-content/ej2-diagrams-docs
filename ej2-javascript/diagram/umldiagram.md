@@ -23,11 +23,11 @@ The UML class diagram shapes are explained as follows.
 
 * A class defines a group of objects that share common specifications, features, constraints, and semantics. To create a class object, the classifier should be defined using the [class] (../api/diagram/umlClassifierShapeModel#class)notation. This notation serves as a foundational element in object-oriented programming, encapsulating the essential characteristics and behavior that objects belonging to the class will exhibit.
 
-* Also, define the [`name`](../api/diagram/umlClassModel#name), [`attributes`](../api/diagram/umlClassModel#attributes), and [`methods`](../api/diagram/umlClassModel#methods) of the class using the class property of node.
+* Also, define the [`name`](../api/diagram/umlClassModel/#name), [`attributes`](../api/diagram/umlClassModel/#attributes), and [`methods`](../api/diagram/umlClassModel/#methods) of the class using the class property of node.
 
-* The attribute’s [`name`](../api/diagram/umlClassAttributeModel#name), [`type`](../api/diagram/umlClassAttributeModel#type), and [`scope`](../api/diagram/umlClassAttributeModel#scope) properties allow you to define the name, data type, and visibility of the attribute.
+* The attribute’s [`name`](../api/diagram/umlClassAttributeModel/#name), [`type`](../api/diagram/umlClassAttributeModel/#type), and [`scope`](../api/diagram/umlClassAttributeModel/#scope) properties allow you to define the name, data type, and visibility of the attribute.
 
-* The method’s [`name`](../api/diagram/umlClassMethodModel#name), [`parameters`](../api/diagram/umlClassMethodModel#parameters), [`type`](../api/diagram/umlClassMethodModel#type), and [`scope`](../api/diagram/umlClassMethodModel#scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
+* The method’s [`name`](../api/diagram/umlClassMethodModel/#name), [`parameters`](../api/diagram/umlClassMethodModel/#parameters), [`type`](../api/diagram/umlClassMethodModel/#type), and [`scope`](../api/diagram/umlClassMethodModel/#scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
 
 * The method parameters object properties allow you to define the name and type of the parameter.
 
@@ -62,9 +62,9 @@ The UML class diagram shapes are explained as follows.
 
 ### Interface
 
-* An interface is a specific type of classifier that signifies a declaration of a cohesive set of public features and obligations. When creating an interface, involves defining the classifier property using the [interface](../api/diagram/umlClassifierShapeModel#interface) notation. This essential concept in object-oriented programming outlines a contract for classes to adhere to, specifying the required methods and behaviors without delving into the implementation details.
+* An interface is a specific type of classifier that signifies a declaration of a cohesive set of public features and obligations. When creating an interface, involves defining the classifier property using the [interface](../api/diagram/umlClassifierShapeModel/#interface) notation. This essential concept in object-oriented programming outlines a contract for classes to adhere to, specifying the required methods and behaviors without delving into the implementation details.
 
-* Also, define the [`name`](../api/diagram/umlInterfaceModel#name), [`attributes`](../api/diagram/umlInterfaceModel#attributes), and [`methods`](../api/diagram/umlInterfaceModel#methods) of the interface using the interface property of the node.
+* Also, define the [`name`](../api/diagram/umlInterfaceModel/#name), [`attributes`](../api/diagram/umlInterfaceModel/#attributes), and [`methods`](../api/diagram/umlInterfaceModel/#methods) of the interface using the interface property of the node.
 
 * The attribute’s name, type, and scope properties allow you to define the name, data type, and visibility of the attribute.
 
@@ -103,7 +103,7 @@ The UML class diagram shapes are explained as follows.
 
 ### Enumeration
 
-* To establish an enumeration, designate the classifier property of the node as [enumeration](../api/diagram/umlClassifierShapeModel#enumeration). Additionally, define the name and enumerate the members of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific, and named constants within a system.
+* To establish an enumeration, designate the classifier property of the node as [enumeration](../api/diagram/umlClassifierShapeModel/#enumeration). Additionally, define the name and enumerate the members of the enumeration using the appropriate enumeration property of the node. This process encapsulates a set of distinct values within the enumeration, allowing for a clear representation of specific, and named constants within a system.
 
 * You can set a name for the enumeration members collection using the name property of the members collection.
 
@@ -337,7 +337,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 
 * To set an optionality or cardinality for the connector source label, use the optional property.
 
-* The [`lowerBounds`](../api/diagram/multiplicityLabelModel#lowerBounds) and [`upperBounds`](../api/diagram/multiplicityLabelModel#upperBounds) could be natural constants or constant expressions evaluated to a natural (non negative) number. The upper bound could also be specified as an asterisk ‘\*’ which denotes an unlimited number of elements. The upper bound should be greater than or equal to the lower bound.
+* The [`lowerBounds`](../api/diagram/multiplicityLabelModel/#lowerBounds) and [`upperBounds`](../api/diagram/multiplicityLabelModel/#upperBounds) could be natural constants or constant expressions evaluated to a natural (non negative) number. The upper bound could also be specified as an asterisk ‘\*’ which denotes an unlimited number of elements. The upper bound should be greater than or equal to the lower bound.
 
 * The following code example illustrates how to customize the multiplicity.
 
@@ -374,7 +374,7 @@ In UML nodes, child elements such as members, methods and attributes can be adde
 
 ### Adding UML child through code
 
-The [addChildToUmlNode](../api/diagram#addchildtoumlnode) method is employed for dynamically adding a child to the UML node during runtime, providing flexibility in modifying the diagram structure programmatically.
+The [addChildToUmlNode](../api/diagram/#addchildtoumlnode) method is employed for dynamically adding a child to the UML node during runtime, providing flexibility in modifying the diagram structure programmatically.
 
 The following code illustrates how to add methods to UML nodes in the diagram.
 
