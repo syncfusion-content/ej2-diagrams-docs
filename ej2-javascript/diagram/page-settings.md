@@ -17,13 +17,13 @@ Page settings enable to customize the appearance, width, and height of the diagr
 
 * The size and appearance of the diagram pages can be customized with the page settings property.
 
-* The [`width`](../api/diagram/pageSettings#width-number) and [`height`](../api/diagram/pageSettings#height-number) properties of page settings define the size of the page and based on the size, the [`orientation`](../api/diagram/pageSettings#orientation-PageOrientation) will be set for the page. In addition to that, the appearance of the page can be customized with [`source`](../api/diagram/background#source-string) and set of appearance specific properties.
+* The [`width`](../api/diagram/pageSettings/#width-number) and [`height`](../api/diagram/pageSettings/#height-number) properties of page settings define the size of the page and based on the size, the [`orientation`](../api/diagram/pageSettings/#orientation-PageOrientation) will be set for the page. In addition to that, the appearance of the page can be customized with [`source`](../api/diagram/background/#source-string) and set of appearance specific properties.
 
-* The [`color`](../api/diagram/background#color-string) property is used to customize the background color and border color of the page.
+* The [`color`](../api/diagram/background/#color-string) property is used to customize the background color and border color of the page.
 
-* The [`margin`](../api/diagram/pageSettings#margin-MarginModel) property is used to define the page margin.
+* The [`margin`](../api/diagram/pageSettings/#margin-MarginModel) property is used to define the page margin.
 
-* To explore those properties, refer to [`Page Settings`](../api/diagram/pageSettings).
+* To explore those properties, refer to [`Page Settings`](../api/diagram/pageSettings/).
 
 {% if page.publishingplatform == "typescript" %}
 
@@ -54,7 +54,7 @@ Page settings enable to customize the appearance, width, and height of the diagr
 
 ## Set background image
 
-Stretch and align the background image anywhere over the diagram area. The [`source`](../api/diagram/background#source-string) property of [`background`](../api/diagram/pageSettings#background-BackgroundModel) allows you to set the path of the image. The [`scale`](../api/diagram/background#scale-string) and the [`align`](../api/diagram/background#align-ImageAlignment) properties help to stretch/align the background images.
+Stretch and align the background image anywhere over the diagram area. The [`source`](../api/diagram/background/#source-string) property of [`background`](../api/diagram/pageSettings/#background-BackgroundModel) allows you to set the path of the image. The [`scale`](../api/diagram/background/#scale-string) and the [`align`](../api/diagram/background/#align-ImageAlignment) properties help to stretch/align the background images.
 
 The following code illustrates how to stretch and align the background image.
 
@@ -89,7 +89,7 @@ The following code illustrates how to stretch and align the background image.
 
 When multiple page is enabled, the size of the page dynamically increases or decreases in multiples of page width and height and completely fits diagram within the page boundaries. Page breaks is used as a visual guide to see how pages are split into multiple pages.
 
-The [`multiplePage`](../api/diagram/pageSettings#multiplepage-boolean) and [`showPageBreak`](../api/diagram/pageSettings#showpagebreaks-boolean) properties of page settings allow you to enable/disable multiple pages and page breaks respectively.
+The [`multiplePage`](../api/diagram/pageSettings/#multiplepage-boolean) and [`showPageBreak`](../api/diagram/pageSettings/#showpagebreaks-boolean) properties of page settings allow you to enable/disable multiple pages and page breaks respectively.
 
 The following code illustrates how to enable multiple page and page break lines.
 
@@ -122,7 +122,7 @@ The following code illustrates how to enable multiple page and page break lines.
 
 ## Boundary constraints
 
-The diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized, or rotated. The [`boundaryConstraints`](../api/diagram/pageSettings#boundaryconstraints-BoundaryConstraints) property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer to [`Boundary Constraints`](../api/diagram/boundaryConstraints).
+The diagram provides support to restrict/customize the interactive region, out of which the elements cannot be dragged, resized, or rotated. The [`boundaryConstraints`](../api/diagram/pageSettings/#boundaryconstraints-BoundaryConstraints) property of page settings allows you to customize the interactive region. To explore the boundary constraints, refer to [`Boundary Constraints`](../api/diagram/boundaryConstraints/).
 
 The following code example illustrates how to define boundary constraints with respect to the page.
 
