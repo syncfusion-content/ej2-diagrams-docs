@@ -18,7 +18,7 @@ The **SymbolPalette** displays a collection of palettes. The palette shows a s
 
 ## Create symbol palette
 
-The [`width`](../api/diagram/palette#width-number) and [`height`](../api/diagram/palette#height-number) properties of the symbol palette allows to define the size of the symbol palette.
+The [`width`](../api/diagram/palette/#width-number) and [`height`](../api/diagram/palette/#height-number) properties of the symbol palette allows to define the size of the symbol palette.
 
 ```javascript
 
@@ -33,11 +33,11 @@ var palette = new ej.diagrams.SymbolPalette({
 
 ## Add palettes to SymbolPalette
 
-A palette allows to display a group of related symbols and it textually annotates the group with its header. A [`Palettes`](../api/diagram/palette#palettes-PaletteModel[]) can be added as a collection of symbol groups.
+A palette allows to display a group of related symbols and it textually annotates the group with its header. A [`Palettes`](../api/diagram/palette/#palettes-PaletteModel[]) can be added as a collection of symbol groups.
 
-The collection of predefined symbols can be added in palettes using the [`symbols`](../api/diagram/palette#symbols-[]) property.
+The collection of predefined symbols can be added in palettes using the [`symbols`](../api/diagram/palette/#symbols-[]) property.
 
-To initialize a palette, define a JSON object with the property [`ID`](../api/diagram/palette#id-string) that is unique ID is set to the palettes.
+To initialize a palette, define a JSON object with the property [`ID`](../api/diagram/palette/#id-string) that is unique ID is set to the palettes.
 
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
@@ -56,15 +56,15 @@ The following code example illustrates how to define a palette and how its added
 
 Palettes can be annotated with its header texts.
 
-The [`title`](../api/diagram/palette#title-string) displayed as the header text of palette.
+The [`title`](../api/diagram/palette/#title-string) displayed as the header text of palette.
 
-The [`expanded`](../api/diagram/palette#expanded-boolean) property of palette allows to expand/collapse its palette items.
+The [`expanded`](../api/diagram/palette/#expanded-boolean) property of palette allows to expand/collapse its palette items.
 
-The [`height`](../api/diagram/palette#height-number) property of palette sets the height of the symbol group.
+The [`height`](../api/diagram/palette/#height-number) property of palette sets the height of the symbol group.
 
-The [`iconCss`](../api/diagram/palette#iconCss-string) property sets the content of the symbol group.
+The [`iconCss`](../api/diagram/palette/#iconCss-string) property sets the content of the symbol group.
 
-The [`description`](../api/diagram/symbolDescription#description) defines the text to be displayed and how that is to be handled in `getSymbolInfo`.
+The [`description`](../api/diagram/symbolDescription/#description) defines the text to be displayed and how that is to be handled in `getSymbolInfo`.
 
 Also, any HTML element into a palette header can be embedded by defining the getSymbolInfo property.
 The following code example illustrates how to customize palette headers.
@@ -98,7 +98,7 @@ In the following code example the basic shapes palette is restricted from gettin
 
 ## Stretch the symbols into the palette
 
-The [`fit`](../api/diagram/symbolInfo#fit-boolean) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
+The [`fit`](../api/diagram/symbolInfo/#fit-boolean) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -113,9 +113,9 @@ The [`fit`](../api/diagram/symbolInfo#fit-boolean) property defines whether the 
 
 ## Add/Remove symbols to palette at runtime
 
-* Symbols can be added to palette at runtime by using public method, [`addPaletteItem`](../api/diagram/palette#addPaletteItem-number).
+* Symbols can be added to palette at runtime by using public method, [`addPaletteItem`](../api/diagram/palette/#addPaletteItem-number).
 
-* Symbols can be removed from palette at runtime by using public method, [`removePaletteItem`](../api/diagram/palette#removePaletteItem-number).
+* Symbols can be removed from palette at runtime by using public method, [`removePaletteItem`](../api/diagram/palette/#removePaletteItem-number).
 
 ## Customize the size of symbols
 
@@ -137,9 +137,9 @@ elements, outside of any defined borders.
 
 ## Symbol preview
 
-The symbol preview size of the palette items can be customized using [`symbolPreview`](../api/diagram/symbolPreview).
-The [`width`](../api/diagram/symbolPreview#width-number) and [`height`](../api/diagram/symbolPreview#height-number) properties of SymbolPalette enables you to define the preview size to all the symbol palette items.
-The [`offset`](../api/diagram/symbolPreview#offset-PointModel) of the dragging helper relative to the mouse cursor.
+The symbol preview size of the palette items can be customized using [`symbolPreview`](../api/diagram/symbolPreview/).
+The [`width`](../api/diagram/symbolPreview/#width-number) and [`height`](../api/diagram/symbolPreview/#height-number) properties of SymbolPalette enables you to define the preview size to all the symbol palette items.
+The [`offset`](../api/diagram/symbolPreview/#offset-PointModel) of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -235,7 +235,7 @@ Here, the code provided below demonstrates how to define tooltip content to symb
 
 Differentiate the tooltips between symbols in the symbol palette and dropped nodes by utilizing the dragEnter event. When a custom tooltip is defined for a symbol, it will be displayed for both the symbol and the dropped node in the diagram canvas. However, to provide distinct tooltips for symbols in the palette and dropped nodes, capture the dragEnter event and assign specific tooltips dynamically. 
 
-When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`] [`IDragEnterEventArgs`](../api/diagram/iDragEnterEventArgs) event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
+When a symbol is dragged from the symbol palette and enters the diagram canvas, the [`DragEnter`] [`IDragEnterEventArgs`](../api/diagram/iDragEnterEventArgs/) event is triggered. Within this event, you can define a new tooltip for the dropped node. By assigning custom tooltip content to the Tooltip property of the node, you can provide a distinct tooltip that is specific to the dropped node.
 
 The following image illustrates the differentiation of tooltips displayed in the Symbol Palette and the Diagram.
 
@@ -269,15 +269,15 @@ Palette interaction notifies the element enter, leave, and dragging of the symbo
 
 ## DragEnter
 
-[`DragEnter`] [`IDragEnterEventArgs`](../api/diagram/iDragEnterEventArgs) notifies, when the element enter into the diagram from symbol palette.
+[`DragEnter`] [`IDragEnterEventArgs`](../api/diagram/iDragEnterEventArgs/) notifies, when the element enter into the diagram from symbol palette.
 
 ## DragLeave
 
-[`DragLeave`] [`IDragLeaveEventArgs`](../api/diagram/iDragLeaveEventArgs) notifies, when the element leaves from  the diagram.
+[`DragLeave`] [`IDragLeaveEventArgs`](../api/diagram/iDragLeaveEventArgs/) notifies, when the element leaves from  the diagram.
 
 ## DragOver
 
-[`DragOver`] [`IDragOverEventArgs`](../api/diagram/iDragOverEventArgs) notifies, when an element drag over another diagram element.
+[`DragOver`] [`IDragOverEventArgs`](../api/diagram/iDragOverEventArgs/) notifies, when an element drag over another diagram element.
 
 >Note: The diagram provides support to cancel the drag and drop operation from the symbol palette to the diagram when the ESC key is pressed
 
