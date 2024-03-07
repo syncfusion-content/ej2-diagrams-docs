@@ -1,0 +1,66 @@
+
+
+
+import {
+    Diagram, ConnectorModel, Node, DataBinding, HierarchicalTree, TreeInfo, SnapConstraints,
+} from '@syncfusion/ej2-diagrams';
+Diagram.Inject(DataBinding, HierarchicalTree);
+import { DataManager, Query } from '@syncfusion/ej2-data';
+export interface EmployeeInfo {
+  Name: string;
+  Role: string;
+}
+
+let data: object[] = [{Name: "CEO", Role: "CEO" },
+    { Name: "Project Manager1", ReportingPerson: "CEO", Role: "Manager" },
+    { Name: "Project Manager2", ReportingPerson: "CEO", Role: "Manager" },
+    { Name: "Engineer1", ReportingPerson: "Project Manager1", Role: "Lead" },
+    { Name: "Engineer2", ReportingPerson: "Project Manager2", Role: "Lead" }
+];
+let items: DataManager = new DataManager(data as JSON[], new Query().take(7));
+let diagram: Diagram = new Diagram({
+    width: '100%', height: '600px',
+    snapSettings: { constraints: SnapConstraints.None },
+    //Use automatic layout to arrange elements on the page
+    layout: {
+        type:'OrganizationalChart',
+        margin: {left: 10, top: 10},
+        horizontalSpacing: 50,
+        verticalSpacing: 50,
+        orientation:'TopToBottom',
+        getLayoutInfo: (node: Node, tree: TreeInfo) => {
+            if (!tree.hasSubTree) {
+                tree.orientation = 'Vertical';
+                tree.type = 'Alternate';
+                }
+        }
+    },
+    dataSourceSettings: {
+        id: 'Name', parentId: 'ReportingPerson', dataManager: items
+    },
+    getNodeDefaults: (obj: Node, diagram: Diagram) => {
+        obj.height = 30; obj.width = 70;
+        obj.shape = {type: 'Basic', shape: 'Rectangle'};
+        obj.style = { fill: '#d0f0f1', strokeColor: '#797979' };
+        obj.annotations = [{
+            id: "label1",
+            content: (obj.data as EmployeeInfo).Name,
+            style:{
+            fontSize: 11,
+            bold: true,
+            fontFamily: "Segoe UI",
+            color: "white",
+            }
+        }]
+            return obj;
+    },
+    getConnectorDefaults: (connector: ConnectorModel, diagram: Diagram) => {
+        connector.targetDecorator.shape = 'Arrow';
+        connector.type = 'Orthogonal';
+        return connector;
+    },
+});
+diagram.appendTo('#element');
+
+
+

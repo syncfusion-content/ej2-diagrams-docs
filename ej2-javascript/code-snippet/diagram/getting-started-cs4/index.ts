@@ -5,12 +5,12 @@ import {
     Diagram, NodeModel, ConnectorModel
 } from '@syncfusion/ej2-diagrams';
 let nodes: NodeModel[] = [
-    { id: 'Start', offsetY: 50, annotations: [{ content: 'Start' }], shape: { type: 'Flow', shape: 'Terminator' } },
-    { id: 'Init', offsetY: 140, annotations: [{ content: 'var i = 0;' }], shape: { type: 'Flow', shape: 'Process' } },
-    { id: 'Condition', offsetY: 230, annotations: [{ content: 'i < 10?' }], shape: { type: 'Flow', shape: 'Decision' } },
-    { id: 'Print', offsetY: 320, annotations: [{ content: 'print(\'Hello!!\');' }], shape: { type: 'Flow', shape: 'PreDefinedProcess' } },
-    { id: 'Increment', offsetY: 410, annotations: [{ content: 'i++;' }], shape: { type: 'Flow', shape: 'Process' } },
-    { id: 'End', offsetY: 500, annotations: [{ content: 'End' }], shape: { type: 'Flow', shape: 'Terminator' } },
+    { id: 'Start', offsetX:300, offsetY: 50, annotations: [{ content: 'Start' }], shape: { type: 'Flow', shape: 'Terminator' }, style: { fill: '#d0f0f1', strokeColor: '#797979' } },
+    { id: 'Init', offsetX:300, offsetY: 140, annotations: [{ content: 'var i = 0;' }], shape: { type: 'Flow', shape: 'Process' }, style: { fill: '#fbfdc5', strokeColor: '#797979' } },
+    { id: 'Condition', offsetX:300, offsetY: 230, annotations: [{ content: 'i < 10?' }], shape: { type: 'Flow', shape: 'Decision' }, style: { fill: '#c5efaf', strokeColor: '#797979' } },
+    { id: 'Print', offsetX:300, offsetY: 320, annotations: [{ content: 'print(\'Hello!!\');' }], shape: { type: 'Flow', shape: 'PreDefinedProcess' }, style: { fill: '#f8eee5', strokeColor: '#797979' } },
+    { id: 'Increment', offsetX:300, offsetY: 410, annotations: [{ content: 'i++;' }], shape: { type: 'Flow', shape: 'Process' }, style: { fill: '#fbfdc5', strokeColor: '#797979' } },
+    { id: 'End', offsetX:300, offsetY: 500, annotations: [{ content: 'End' }], shape: { type: 'Flow', shape: 'Terminator' }, style: { fill: '#d0f0f1', strokeColor: '#797979' } },
 ];
 let connector: ConnectorModel[] = [
     { id: 'connector1', sourceID: 'Start', targetID: 'Init' },
