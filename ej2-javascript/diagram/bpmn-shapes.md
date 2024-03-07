@@ -604,23 +604,11 @@ Artifact is used to show additional information about a process in order to make
 
 ## Text annotation
 
-* A BPMN object can be associated with a text annotation which does not affect the flow but gives details about objects within a flow. The annotation property of the node is used to connect an annotation element to the BPMN node.
+* A BPMN object can be associated with a text annotation which does not affect the flow but gives details about objects within a flow.
 
-* The annotation element can be displaced into a different position interactively by dragging the annotation to a particular position.
+* A TextAnnotation points to or references another BPMN shape, which we call the [`textAnnotationTarget`](../api/diagram) of the textAnnotation. When a target shape is moved or deleted, any TextAnnotations attached to the shape will be moved or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The textAnnotationTarget property of the BpmnTextAnnotation is used to connect an annotation element to the BPMN Node.
 
 * The annotation element can be switched from a BPMN node to another BPMN node simply by dragging the source end of the annotation connector into the other BPMN node.
-
-* The annotation angle property is used to set the angle between the BPMN shape and the annotation.
-
-* The annotation direction property is used to set the direction of the text annotation.
-
-* To set the size for text annotation, use width and height properties.
-
-* The annotation length property is used to set the distance between the BPMN shape and the annotation.
-
-* The annotation text property defines the additional information about the flow object in a BPMN process.
-
-* A TextAnnotation points to or references another BPMN shape, which we call the [`textAnnotationTarget`](../api/diagram#segmentThumbShape-SegmentThumbShapes) of the textAnnotation. When a target shape is moved or deleted, any TextAnnotations attached to the shape will be moved or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The textAnnotationTarget property of the BpmnTextAnnotation is used to connect an annotation element to the BPMN Node.
 
 * By default, the TextAnnotation shape has a connection.
 
