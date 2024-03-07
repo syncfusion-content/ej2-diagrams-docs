@@ -620,6 +620,18 @@ Artifact is used to show additional information about a process in order to make
 
 * The annotation text property defines the additional information about the flow object in a BPMN process.
 
+* A TextAnnotation points to or references another BPMN shape, which we call the [`textAnnotationTarget`](../api/diagram#segmentThumbShape-SegmentThumbShapes) of the textAnnotation. When a target shape is moved or deleted, any TextAnnotations attached to the shape will be moved or deleted too. Thus, the TextAnnotations remain with their target shapes though you can reposition the TextAnnotation to any offset from its target. The textAnnotationTarget property of the BpmnTextAnnotation is used to connect an annotation element to the BPMN Node.
+
+* By default, the TextAnnotation shape has a connection.
+
+* The textAnnotationDirection property is used to set the shape direction of the text annotation.
+
+* By default, the textAnnotationDirection is set to a Auto.
+
+* To set the size for text annotation, use the width and height properties of the node.
+
+* The offsetX and offsetY properties are used to set the distance between the BPMN node and the TextAnnotation.
+
 {% if page.publishingplatform == "typescript" %}
 
  {% tabs %}
