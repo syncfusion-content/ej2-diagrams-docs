@@ -286,7 +286,7 @@ The following table illustrates those commands with the associated key values.
 | Control + Shift + B | Send To Back | Send the selected shape backward in the stacking order, making it appear behind other shapes.|
 | Control + Shift + F | Bring To Front | Bring the selected shape forward in the stacking order, making it appear in front of other shapes.|
 | Control + [ | Send Backward | Move the selected shape one step backward in the layer order. |
-| Control + ] | Bring Forward | Mlove the selected shape one step forward in the layer order.|
+| Control + ] | Bring Forward | Move the selected shape one step forward in the layer order.|
 
 ## See Also
 
